@@ -1,0 +1,244 @@
+﻿
+ULUSLARARASI İLİŞKİLER
+TEORİLERİ REHBERİ
+
+Bitirme Ödevi Materyali
+Tüm Teoriler · Tanımlar · Karşılaştırmalar · Eleştiriler
+
+2024-2025 Akademik Yılı
+
+
+
+GİRİŞ: Teoriler Neden Önemlidir?
+Uluslararası ilişkiler (Uİ), devletlerin, uluslararası örgütlerin ve diğer aktörlerin birbirleriyle nasıl etkileşime girdiğini inceleyen bir sosyal bilim dalıdır. Bu alandaki teoriler, dünya politikasını anlamak için birer "lens" (mercek) görevi görür: Her teori, olaylara farklı bir açıdan bakar ve farklı soruları ön plana çıkarır.
+Bu rehber, en temel Uİ teorilerini sade bir dille açıklamakta; her teorinin ne söylediğini, kimlerin geliştirdiğini, diğer teorilerle nasıl ilişkilendiğini ve hangi eleştirilerle karşılaştığını bir arada sunmaktadır.
+
+1. REALİZM (Gerçekçilik)
+Temel Fikir
+Realizm, uluslararası politikanın özünde güç mücadelesi yattığını savunur. Devletler, uluslararası arenada kendi çıkarlarını ve güvenliklerini korumak için sürekli rekabet hâlindedir. Dünyada merkezi bir otorite (dünya hükümeti) olmadığı için bu sistem anarşiktir ve devletler her an saldırıya uğrayabileceklerini bilerek hareket etmek zorundadır.
+
+💡 ÖzetDünya tehlikeli bir yerdir. Devletler güçlerini artırmak ve hayatta kalmak zorundadır.
+Temel Kavramlar
+• Anarşi: Devletlerin üzerinde herkesi denetleyecek bir güç yoktur.
+• Ulusal Çıkar: Her devletin önceliği kendi güvenliği ve bekasıdır.
+• Güç Dengesi: Tek bir devletin herkesi ezmesini önlemek için devletler ittifaklar kurar.
+• Güvenlik İkilemi: Bir devletin savunma amaçlı arttırdığı güç, komşularını tehdit altında hissettirerek silahlanma yarışına yol açar.
+
+Alt Akımlar
+Klasik Realizm: İnsan doğasının bencil ve güç arayışçısı olduğundan hareket eder. Hans Morgenthau bu görüşün en bilinen temsilcisidir.
+Yapısal Realizm (Neorealizm): Kenneth Waltz, devletleri değil uluslararası sistemin yapısını (anarşi) belirleyici faktör olarak görür. Devletler kötü olduğu için değil, sisteme uyum sağlamak zorunda kaldıkları için güç peşinde koşar.
+Saldırgan Realizm: John Mearsheimer'a göre devletler her zaman daha fazla güç istemek zorundadır; çünkü bir rakibiniz ne zaman sizi geçeceğini bilemezsiniz.
+
+Önemli Düşünürler
+ThucydidesAntik Yunan tarihçisi; güç politikasının en eski anlatıcısıdır. 'Güçlü olan ister, zayıf olan kabul eder' sözü realizmin özeti gibidir.
+Niccolò MachiavelliPrens (1513): Siyasette ahlaktan çok etkinlik önemlidir; hükümdar gerektiğinde güç kullanmalıdır.
+Hans MorgenthauPolitics Among Nations (1948): Modern realizmin kurucusu; ulusal çıkar ve güç dengesini sistematize etti.
+Kenneth WaltzTheory of International Politics (1979): Neorealizmin babası; yapısal analizin öncüsü.
+Diğer Teorilerle İlişkisi
+Realizm, liberalizmle doğrudan çatışır: Liberaller işbirliğinin mümkün olduğunu söylerken realistler bunun naif olduğunu öne sürer. İnşacılığa göre ise realizmin 'anarşi kaçınılmazdır' varsayımı yanlıştır; anarşinin anlamını devletler kendileri üretir.
+
+Eleştiriler
+• Devlet merkezcilik: Devlet dışı aktörleri (STK'lar, çok uluslu şirketler, bireyler) görmezden gelir.
+• Statik yapı: Tarihsel değişimi ve barışçıl dönüşümü açıklayamaz.
+• Kendi kendini doğrulayan kehanet: 'Devletler güç ister' diyerek bu davranışı meşrulaştırır.
+
+2. LİBERALİZM
+Temel Fikir
+Liberalizm, realizmin karamsarlığına karşı çıkar. İnsan doğasının işbirliğine yatkın olduğunu ve devletlerin ortak kurumlar, ticaret ve demokrasi aracılığıyla barışı inşa edebileceğini savunur. Anarşi var olsa da devletler mantıklı davranarak uzun vadeli kazanımları elde etmek için işbirliği yapar.
+
+💡 Özetİşbirliği mümkündür. Kurumlar, ticaret ve demokrasi kalıcı barışın temelidir.
+Temel Kavramlar
+• Karşılıklı Bağımlılık: Ekonomik açıdan birbirine bağlı devletlerin savaşması maliyetli ve anlamsız hale gelir.
+• Demokratik Barış Teorisi: Demokratik devletler birbirleriyle nadiren savaşır.
+• Uluslararası Kurumlar: BM, DTÖ, AB gibi örgütler devletlerin işbirliğini kolaylaştırır.
+• İnsan Hakları: Devlet egemenliğinin sınırları var; bireyin hakları da uluslararası gündemin parçasıdır.
+
+Alt Akımlar
+Klasik Liberalizm: Kant'ın 'Ebedi Barış' projesinden beslenir. Ticaret, cumhuriyet yönetimi ve uluslararası hukuk barışı getirir.
+Neoliberal Kurumsalcılık: Robert Keohane ve Joseph Nye: Kurumlar devletlerin işbirliği sorunlarını (özellikle 'mahkum ikilemi' gibi sorunları) aşmasına yardım eder.
+Karmaşık Karşılıklı Bağımlılık: Birden fazla kanal (hükümet dışı, çok uluslu) üzerinden ilerleyen ilişkiler, askeri gücün önemini azaltır.
+
+Önemli Düşünürler
+Immanuel KantZum ewigen Frieden (1795): Cumhuriyetçi devletler, ortak hukuk ve serbest ticaretin sağlayacağı kalıcı barış vizyonu.
+Robert KeohaneAfter Hegemony (1984): Hegemon olmasa da uluslararası kurumlar işbirliğini sürdürebilir.
+Michael DoyleDemokratik barış tezini ampirik olarak kanıtlamaya çalışmıştır.
+Diğer Teorilerle İlişkisi
+Realizm ile temel çatışması sürmektedir: Liberaller kurumların işe yaradığını savunurken realistler bunların güç politikasını yumuşatan birer sis perdesi olduğunu söyler. İnşacılık liberalizmle kısmen örtüşür; kimlik ve normların barışa katkısını kabul eder.
+
+Eleştiriler
+• Batı merkezcilik: Demokrasi ve serbest piyasayı evrensel değer olarak dayatır.
+• Naif iyimserlik: Güç dengelerini ve çatışma dinamiklerini küçümser.
+• Kurumların yetersizliği: BM'nin Suriye'de, Ruanda'da yaşananları önleyememesi liberal iyimserliği sarsmıştır.
+
+3. İNŞACILIK (Constructivism)
+Temel Fikir
+İnşacılık, uluslararası ilişkilerin 'nesnel gerçeklikler' tarafından değil, aktörlerin paylaştığı fikirler, normlar, kimlikler ve anlayışlar tarafından şekillendirildiğini savunur. Devletler salt güç hesabı yapmaz; kim olduklarını ve dünyayı nasıl anlamlandırdıklarını da göz önüne alır.
+
+💡 ÖzetGerçeklik sosyal olarak inşa edilir. Fikirler, kimlikler ve normlar en az güç kadar belirleyicidir.
+Temel Kavramlar
+• Sosyal İnşa: 'Anarşi devletlerin yarattığı bir şeydir' (Alexander Wendt). Yani ne anlama geldiğine biz karar veririz.
+• Kimlik ve Çıkar: Devletlerin çıkarları sabit değildir; kimliklerine ve algılarına göre şekillenir.
+• Normlar: Uluslararası arenada kabul gören davranış kuralları (insan hakları normu, kimyasal silah yasağı) gerçek davranışı etkiler.
+• Söylem ve Dil: Politikacıların kullandığı dil, tehditleri ve kimlikleri inşa eder.
+
+Önemli Düşünürler
+Alexander WendtAnarchy is What States Make of It (1992) / Social Theory of International Politics (1999): İnşacılığın manifestosu.
+Peter KatzensteinKültür ve normların güvenlik politikasını şekillendirdiğini ampirik çalışmalarla ortaya koydu.
+Martha FinnemoreNormların uluslararası politikayı nasıl yönlendirdiğini inceledi; 'norm girişimcisi' kavramı ona aittir.
+Diğer Teorilerle İlişkisi
+Realizme karşı çıkar: 'Anarşi kaçınılmaz değil, öyle anlamlandırıyoruz' der. Liberalizmle örtüşür: Her ikisi de normların ve kurumların önemini kabul eder, ancak inşacılık bunu daha derin bir kimlik analizine oturttur. Post-pozitivist teorilerle (postmodern, feminist) ortak bir zemin paylaşır; hepsi de gerçekliğin yorumlara bağlı olduğunu vurgular.
+
+Eleştiriler
+• Belirsizlik: 'Her şey inşa edilmiştir' demek, ne zaman, kimin tarafından, nasıl sorularını muğlak bırakır.
+• Politika reçetesi sunmaz: Normlar nasıl değiştirilir? Pratik yanıtlar sınırlıdır.
+• Güç ihmalı: Fikirlerin gücü ile maddi gücü nasıl ilişkilendireceğini tam açıklayamaz.
+
+4. MARKSİZM VE ELEŞTİREL TEORİLER
+Temel Fikir
+Marksist Uİ teorisi, uluslararası politikayı sınıf çatışması ve ekonomik güç ilişkileri ekseninde açıklar. Devletlerin davranışları, elit sınıfın ve sermayenin çıkarlarıyla doğrudan bağlantılıdır. Kapitalist sistem, zengin (merkez) ülkeler ile yoksul (çevre) ülkeler arasında yapısal bir eşitsizlik üretir.
+
+💡 ÖzetUluslararası politikayı anlamak için ekonomik çıkar ve sınıf ilişkilerine bakılmalıdır.
+Temel Kavramlar
+• Dünya Sistemi: İmmanuel Wallerstein'a göre dünya, merkez (gelişmiş), yarı-çevre ve çevre (azgelişmiş) ülkelerden oluşur; bu yapı kapitalizm tarafından üretilmiştir.
+• Emperyalizm: Lenin'e göre kapitalizm kaçınılmaz olarak emperyalizme yol açar; ülkeler yeni pazarlar ve kaynaklar için savaşır.
+• Hegemonya: Antonio Gramsci'nin kavramı; egemen sınıf sadece zor yoluyla değil, rıza üreterek (kültür, ideoloji) hâkimiyetini sürdürür.
+
+Önemli Düşünürler
+Karl Marx & Friedrich EngelsKomünist Manifesto (1848): Tarihsel materyalizm; üretim ilişkileri her şeyi belirler.
+V.I. LeninEmperyalizm: Kapitalizmin En Yüksek Aşaması (1917): Uluslararası rekabeti sermaye birikimi üzerinden açıkladı.
+İmmanuel WallersteinThe Modern World-System (1974): Dünya sistemi analizinin kurucusu.
+Robert CoxUİ'de eleştirel teorinin en sistematik kurucusu; 'sorun çözücü teori' ile 'eleştirel teori' ayrımını yaptı.
+Diğer Teorilerle İlişkisi
+Realizme katılmaz: Güç mücadelesi devletler arasında değil, sınıflar arasındadır. Liberalizmi de eleştirir: Serbest ticaret ve kurumlar eşitsizliği gizlemek için kullanılan araçlardır. Postkolonyal ve feminist teorilerle örtüşür; hepsi marjinalleştirilmiş grupların bakış açısını ön plana taşır.
+
+Eleştiriler
+• Ekonomik indirgemecilik: Her şeyi ekonomiye bağlamak, kültür, din, kimlik gibi faktörleri ihmal etmesine yol açar.
+• SSCB'nin çöküşü: Marksist sistemin pratik başarısızlığı teorinin güvenilirliğini sarstı.
+• Devlet dışı aktör körlüğü: Toplumsal hareketler, sivil toplum gibi yapıları yeterince analiz edemez.
+
+5. POSTKOLONYALİZM
+Temel Fikir
+Postkolonyal teori, Uİ'nin Batı merkezli bakış açısını sorgular. Sömürgecilik tarihinin etkilerini ve Güney ülkelerin sesinin nasıl dışlandığını ön plana taşır. Mevcut dünya düzeni, sömürge geçmişinin izlerini taşımaktadır ve bu izler teorik bilginin üretimine de sirayet etmiştir.
+
+💡 ÖzetKim anlatıyor? Uİ teorileri çoğunlukla Batı perspektifinden yazılmıştır; güney'in sesi yoktur.
+Temel Kavramlar
+• Oryantalizm: Edward Said'e göre Batı, 'Doğu'yu egzotik ve ilkel olarak kurgulamış; bu söylem sömürgeciliği meşrulaştırmıştır.
+• Dekolonizasyon: Sadece fiziksel sömürgeden değil, bilgi üretimindeki Avrupa egemenliğinden de özgürleşmek.
+• Sessilik: Gayatri Spivak'ın 'Subaltern Can Speak?' sorusu: Toplumun en altta kalanları gerçekten duyulabilir mi?
+
+Önemli Düşünürler
+Edward SaidOrientalism (1978): Batı'nın Doğu'yu nasıl temsil ettiğini ve bu temsillerin gücü nasıl pekiştirdiğini analiz etti.
+Frantz FanonYeryüzünün Lanetlileri (1961): Sömürgeciliğin psikolojik ve toplumsal tahribatını anlattı.
+Gayatri SpivakSubaltern Studies hareketi; marjinalleştirilmiş seslerin temsilini inceledi.
+Diğer Teorilerle İlişkisi
+Marksizmle ortak zeminleri vardır: İkisi de yapısal eşitsizliklere odaklanır. Feminist teorilerle kesişir: Her ikisi de 'kimin bakış açısının önemsendiği' sorusunu sorar. İnşacılıkla da bağlantılıdır; kimlik ve söylemin gücü her ikisi için de merkezi bir sorundur.
+
+Eleştiriler
+• Ampirik zayıflık: Söylem analizine ağırlık verirken somut politika önerileri sunmakta yetersizdir.
+• Homojenlik sorunu: 'Güney' veya 'ezilen' kategorileri kendi içindeki farklılıkları gözardı edebilir.
+• Pratik politikaya uzaklık: Karar alıcılar için somut yol göstermez.
+
+6. FEMİNİST ULUSLARARASI İLİŞKİLER
+Temel Fikir
+Feminist Uİ teorisi, uluslararası politikada cinsiyet (gender) ilişkilerinin nasıl işlediğini inceler. Ana akım teorilerin 'tarafsız' gibi göründüğünü ama aslında erkek deneyimini norm olarak aldığını savunur. Savaş, güvenlik, ekonomi gibi konular cinsiyetle iç içe geçmiş durumda ele alınmalıdır.
+
+💡 ÖzetUİ teorileri kimin deneyimini anlatıyor? Kadınlar nerede? Güvenlik kimin için?
+Temel Kavramlar
+• Toplumsal Cinsiyet: Biyolojik cinsiyetin ötesinde, toplumun kadın ve erkeğe biçtiği roller.
+• Güvenliğin Yeniden Tanımı: Geleneksel güvenlik anlayışı (askeri tehdit) yetersizdir; insanların gündelik hayatına ilişkin güvensizlikler (açlık, şiddet, eşitsizlik) de güvenlik meselesidir.
+• Askeri Milliyetçilik: Cindy Enloe, ordunun ve savaşın cinsiyetlendirilmiş yapısını ortaya koyar.
+
+Önemli Düşünürler
+J. Ann TicknerGender in International Relations (1992): Feminist eleştirinin ana akım teorilere yönelik en sistematik güçlendirilmiş yanıtı.
+Cynthia EnloeBananas, Beaches and Bases (1990): Kadınların uluslararası politikadaki 'görünmez' rollerini araştırdı.
+Christine SylvesterFeminist teori ile post-yapısalcılık arasında köprü kurdu.
+Diğer Teorilerle İlişkisi
+Postkolonyalizm ve Marksizmle kesişim noktaları fazladır: Üçü de marjinalize edilmiş grupların bakış açısını merkeze alır. İnşacılıkla ortak paydası şudur: Hem cinsiyet hem kimlik sosyal olarak inşa edilmiştir. Realizmi en sert eleştiren yaklaşımlar arasında yer alır; 'güvenlik' kavramının yeniden düşünülmesini ister.
+
+Eleştiriler
+• Evrensellik iddiası: 'Kadın deneyimi' diye homojen bir kategori var mıdır?
+• Ana akımla diyalog güçlüğü: Devlet politikalarını doğrudan yönlendirmek zordur.
+• İç çeşitlilik: Liberal, radikal, sosyalist, postmodern feminist akımlar arasında derin tartışmalar var.
+
+7. İNGİLİZ OKULU (Uluslararası Toplum Teorisi)
+Temel Fikir
+İngiliz Okulu, realizm ile liberalizm arasında bir orta yol arar. Devletlerin hem anarşik bir sistemde yaşadığını (realizm) hem de ortak normlar, değerler ve kurumlar aracılığıyla bir 'uluslararası toplum' oluşturduğunu savunur. Bu toplumun içinde devletler sadece güç hesabı yapmaz; meşruiyet, adalet ve normlar da önemlidir.
+
+💡 ÖzetDevletler sadece güç oyunu oynamaz; aynı zamanda ortak kurallar ve normlarla bir uluslararası toplum oluşturur.
+Temel Kavramlar
+• Uluslararası Sistem: Devletlerin etkileşime girdiği yapı.
+• Uluslararası Toplum: Devletlerin ortak kurallara ve kurumlara bağlı hissettikleri ortam.
+• Dünya Toplumu: Bireyler ve sivil toplum dahil daha geniş bir küresel toplum vizyonu.
+• Kurumlar: Egemenlik, diplomasi, uluslararası hukuk, savaş kuralları gibi paylaşılan pratikler.
+
+Önemli Düşünürler
+Hedley BullThe Anarchical Society (1977): İngiliz Okulu'nun klasik eseri; anarşi içinde düzenin nasıl mümkün olduğunu tartışır.
+Martin WightUluslararası teoriyi realism, rationalism, revolutionism olarak üçe ayırdı.
+Barry Buzanİngiliz Okulu'nu güncelleyen ve güvenlik çalışmalarıyla birleştiren isim.
+Diğer Teorilerle İlişkisi
+Realizm ve liberalizm arasında bir sentez denemeleri vardır. İnşacılıkla örtüşür: Her ikisi de normların ve kimliğin rolüne dikkat çeker. Küresel adalet ve sorumluluk konularında kozmopolitanizmle diyalog içindedir.
+
+Eleştiriler
+• Belirsiz orta yol: Ne tam realist ne tam liberal olduğu için ikisi tarafından da eleştirilir.
+• Avrupa merkezcilik: 'Uluslararası toplum' ağırlıklı olarak Avrupa egemenliği dönemine dayanır.
+• Normatif tutarsızlık: İnsan hakları ile egemenlik gibi birbiriyle çatışan değerleri nasıl dengeleyeceği konusunda net değildir.
+
+8. POST-YAPISALCILIK VE POSTMODERNİZM
+Temel Fikir
+Post-yapısalcılık, 'nesnel gerçeklik' ve 'evrensel doğru' iddialarını sorgular. Bilginin güçten bağımsız olmadığını, her teorinin gizli varsayımlar ve iktidar ilişkileri içerdiğini savunur. Uİ teorileri anlatı ve söylem olarak ele alınır; 'kim kimin adına konuşuyor?' sorusu merkeze taşınır.
+
+💡 ÖzetHiçbir teori tarafsız değildir. Her bilgi iddiasının ardında iktidar ilişkileri yatar.
+Önemli Düşünürler
+Michel FoucaultBilgi ile iktidar arasındaki ilişkiyi analiz etti; söylem analizinin temellerini attı.
+Jacques DerridaMetinlerin ve kavramların yapısökümü (deconstruction); kimliklerin ve sınırların nasıl kurulduğunu inceledi.
+David CampbellWriting Security: ABD güvenlik söylemini post-yapısalcı bir analizle inceledi.
+Diğer Teorilerle İlişkisi
+İnşacılıkla akraba fakat daha radikal: İnşacılık söylemsel süreçlere dikkat çeker ama yine de bazı 'gerçeklik' iddialarını korur; post-yapısalcılık bunu da reddeder. Feminist ve postkolonyal teorilerle güçlü bağları var: Hepsi iktidar-bilgi ilişkisini sorunsallaştırır.
+
+Eleştiriler
+• Politika önerisi sunamaz: Her şeyi söylemsel olarak görmek, somut politika rehberliğini olanaksızlaştırır.
+• Kendi kendini çürütür mi?: 'Hiçbir bilgi tarafsız değildir' iddiası da bir iddia değil midir?
+• Akademik içe kapanma: Anlaşılması güç bir dil ve soyut analizlerle pratik etki alanı sınırlıdır.
+
+9. GÜVENLİK ÇALIŞMALARI: KOPENHAGEN OKULU
+Temel Fikir
+Kopenhag Okulu, güvenliği yeniden tanımlar: Güvenlik sadece askeri tehditlerle ilgili değildir. 'Güvenlikleştirme' (securitization) kavramıyla açıklanır: Bir konunun güvenlik meselesi haline getirilmesi, siyasi bir söylem eylemidir.
+
+💡 Özet'Güvenlik' siyasi olarak inşa edilir. Kim neyi tehdit ilan ederse, o konu güvenlik meselesi olur.
+Sektörler: Askeri, siyasi, ekonomik, toplumsal ve çevresel güvenlik olmak üzere beş sektör tanımlanmıştır. Her sektörde farklı referans nesneleri ve tehditler var.
+
+Önemli Düşünürler
+Barry BuzanPeople, States and Fear (1983); güvenlik analizini genişletti.
+Ole WæverGüvenlikleştirme teorisini geliştiren isim; dil ve güvenlik politikasının ilişkisini analiz etti.
+Eleştiriler
+• Eurocentric: Avrupa güvenlik sorunları merkeze alınmış, küresel güney ihmal edilmiştir.
+• Güvenlikleştirmenin tehlikesi: Bir şeyin güvenlik sorunu ilan edilmesi otoriter müdahaleleri meşrulaştırabilir.
+
+10. TEORİLERİN KARŞILAŞTIRMASI
+Aşağıdaki tablo, temel teorilerin ana sorularını ve birbirinden farkını özetlemektedir.
+
+TEORİANA SORUTEMEL AKTÖRİŞBİRLİĞİ MÜMKÜN MÜ?RealizmKim hayatta kalır?DevletZor/sınırlıLiberalizmİşbirliği nasıl artar?Devlet + kurumlarEvet, kurumlar sayesindeİnşacılıkKimlikler ne söylüyor?Aktörler + normlarEvet, ortak kimlikleMarksizmKim kimin çıkarına?Sınıf/sermayeSınıf içi evet, sınıflar arası hayırPostkolonyalKimin sesi duyuluyor?Marjinal toplumlarEşit temelde evetFeministCinsiyetin rolü nedir?Kadınlar + cinsiyetYeniden tanımlanırsa evetİngiliz OkuluUluslararası toplum var mı?Devlet + normlarEvet, paylaşılan normlarlaPost-yapısalcılıkBilgi kim için?Söylem/iktidarSorgulanır
+
+SONUÇ: Teorileri Nasıl Kullanmalı?
+Hiçbir teori dünyayı tam olarak açıklayamaz. Her birinin gördüğü şeyler olduğu gibi kör noktaları da vardır. İyi bir Uİ öğrencisi, tek bir teoriye sıkışıp kalmak yerine mercekleri gerektiğinde değiştirebilir.
+
+Bir savaşı analiz mı ediyorsunuz? Realizm güç dengelerini görmek için işe yarar.
+Uluslararası bir anlaşmayı mı inceliyorsunuz? Liberalizm ve İngiliz Okulu normları ve kurumları açıklar.
+Bir bölgede kimlik çatışması mı var? İnşacılık kimliklerin nasıl kurulduğunu gösterir.
+Ekonomik eşitsizliği mi anlıyorsunuz? Marksizm ve dünya sistemi teorisi yardımcıdır.
+Ses kimin duyuluyor diye soruyorsanız? Postkolonyal, feminist ve post-yapısalcı teoriler bu soruyu sorar.
+
+"Teoriler dünyayı yansıtmaz; onu kurar." - Robert Cox
+
+TEMEL KAYNAKLAR
+• Morgenthau, H. J. (1948). Politics Among Nations. Knopf.
+• Waltz, K. (1979). Theory of International Politics. Addison-Wesley.
+• Keohane, R. O. & Nye, J. S. (1977). Power and Interdependence. Little, Brown.
+• Wendt, A. (1999). Social Theory of International Politics. Cambridge University Press.
+• Bull, H. (1977). The Anarchical Society. Macmillan.
+• Said, E. (1978). Orientalism. Pantheon Books.
+• Tickner, J. A. (1992). Gender in International Relations. Columbia University Press.
+• Wallerstein, I. (1974). The Modern World-System. Academic Press.
+• Buzan, B., Wæver, O. & de Wilde, J. (1998). Security: A New Framework for Analysis. Lynne Rienner.
+Uluslararası İlişkiler Teorileri Rehberi  |  Sayfa 
+
