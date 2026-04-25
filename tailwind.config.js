@@ -7,6 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
+        brand: {
+          primary: '#0e3c7d',
+          secondary: '#2d6cbf',
+          accent: '#4a8fd9',
+          gold: '#d4a017',
+        },
         bg: {
           primary: '#0a0a0a',
           secondary: '#111827',

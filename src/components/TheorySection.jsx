@@ -34,13 +34,13 @@ function ComparisonTable({ rows }) {
         <tbody>
           {rows.map((row, i) => (
             <tr key={i} className={i % 2 === 0 ? 'bg-[#111827]' : 'bg-[#0f172a]'}>
-              <td className="px-4 py-3 text-amber-400 font-semibold text-sm border-b border-gray-800">{row.theory}</td>
+              <td className="px-4 py-3 text-brand-accent font-semibold text-sm border-b border-gray-800">{row.theory}</td>
               <td className="px-4 py-3 text-gray-300 border-b border-gray-800">{row.mainQuestion}</td>
               <td className="px-4 py-3 text-gray-300 border-b border-gray-800">{row.mainActor}</td>
               <td className="px-4 py-3 border-b border-gray-800">
                 <span className={`px-2 py-0.5 rounded-full text-xs font-mono font-semibold ${
                   row.cooperation === 'Evet'
-                    ? 'bg-emerald-900/50 text-emerald-400'
+                    ? 'bg-brand-primary/30 text-brand-accent'
                     : row.cooperation === 'Hayır'
                     ? 'bg-red-900/50 text-red-400'
                     : 'bg-gray-800 text-gray-400'
@@ -85,10 +85,10 @@ export default function TheorySection({ theory }) {
             </motion.h2>
 
             <motion.div
-              className="bg-amber-500/10 border border-amber-500/30 rounded-xl px-5 py-4 mb-6"
+              className="bg-brand-primary/10 border border-brand-secondary/30 rounded-xl px-5 py-4 mb-6"
               {...fadeUp(0.1)}
             >
-              <p className="text-amber-200 text-sm leading-relaxed font-medium">
+              <p className="text-brand-accent text-sm leading-relaxed font-medium">
                 {theory.summary}
               </p>
             </motion.div>
@@ -106,7 +106,7 @@ export default function TheorySection({ theory }) {
                 <ul className="space-y-1.5">
                   {theory.keyConcepts.map((concept, i) => (
                     <li key={i} className="flex items-start gap-2 text-gray-300 text-sm">
-                      <span className="text-amber-500 mt-0.5 flex-shrink-0">▸</span>
+                      <span className="text-brand-accent mt-0.5 flex-shrink-0">▸</span>
                       <span>{concept}</span>
                     </li>
                   ))}
@@ -173,7 +173,7 @@ export default function TheorySection({ theory }) {
                 <ul className="space-y-1.5">
                   {theory.usageGuide.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-gray-300 text-sm">
-                      <span className="text-emerald-500 mt-0.5 flex-shrink-0">→</span>
+                      <span className="text-brand-secondary mt-0.5 flex-shrink-0">→</span>
                       <span>{item}</span>
                     </li>
                   ))}
@@ -183,7 +183,7 @@ export default function TheorySection({ theory }) {
 
             {theory.closingQuote && (
               <motion.blockquote
-                className="mt-8 border-l-2 border-amber-500/40 pl-5 italic text-gray-400 text-sm leading-relaxed"
+                className="mt-8 border-l-2 border-brand-secondary/40 pl-5 italic text-gray-400 text-sm leading-relaxed"
                 {...fadeUp(0.4)}
               >
                 {theory.closingQuote}

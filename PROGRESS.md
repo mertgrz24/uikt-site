@@ -78,6 +78,12 @@ src/hooks/useScrollAnimation.js
 
 ---
 
+## 📝 Güncelleme Notları
+
+- `three` paketi `0.160.0`'dan `0.170.0`'a yükseltildi — `react-globe.gl` uyumu için.
+
+---
+
 ## ⚠️ Dikkat Edilmesi Gereken Notlar
 
 1. **world-110m.json eksik.** `public/` klasörüne `https://unpkg.com/world-atlas@2/countries-110m.json` adresinden indirilip `world-110m.json` olarak kaydedilmesi gerekiyor. Globe3D çalışmadan önce bu dosya olmalı.

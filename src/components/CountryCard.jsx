@@ -9,7 +9,7 @@ export default function CountryCard({ country }) {
     >
       <div className="flex items-center gap-3 mb-2">
         <span className="text-3xl">{country.flag}</span>
-        <span className="font-display font-semibold text-white text-sm group-hover:text-amber-400 transition-colors">
+        <span className="font-display font-semibold text-white text-sm group-hover:text-brand-accent transition-colors">
           {country.name}
         </span>
       </div>

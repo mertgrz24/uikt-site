@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { getCountryById } from '../data/countries'
+import Footer from '../components/Footer'
 
 const fadeSlide = {
   initial: { opacity: 0, y: 28 },
@@ -25,7 +26,7 @@ export default function CountryPage() {
   if (!country) {
     return (
       <div className="min-h-screen bg-[#0a0a0a] flex flex-col items-center justify-center gap-4">
-        <p className="text-gray-400 font-sans text-lg">Ülke bulunamadı: <span className="font-mono text-amber-400">{id}</span></p>
+        <p className="text-gray-400 font-sans text-lg">Ülke bulunamadı: <span className="font-mono text-brand-accent">{id}</span></p>
         <button
           onClick={() => navigate('/')}
           className="text-sm text-gray-500 hover:text-white transition-colors underline underline-offset-4"
@@ -86,6 +87,7 @@ export default function CountryPage() {
           </div>
         </motion.div>
       </div>
+      <Footer />
     </div>
   )
 }

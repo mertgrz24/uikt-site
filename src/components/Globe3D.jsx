@@ -1,9 +1,8 @@
 import { useRef, useState, useEffect, useMemo } from 'react'
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
 import { useNavigate } from 'react-router-dom'
 import * as THREE from 'three'
-import { feature as topoFeature, mesh as topoMesh } from 'topojson-client'
+import { feature as topoFeature } from 'topojson-client'
+import Globe from 'react-globe.gl'
 
 const ISO_TO_SLUG = {
   792: 'turkey',
@@ -38,157 +37,32 @@ const ISO_TO_SLUG = {
   804: 'ukraine',
 }
 
-function lonLatToVec3(lon, lat, r = 1) {
-  const phi = (90 - lat) * (Math.PI / 180)
-  const theta = (lon + 180) * (Math.PI / 180)
-  return new THREE.Vector3(
-    -Math.sin(phi) * Math.cos(theta) * r,
-    Math.cos(phi) * r,
-    Math.sin(phi) * Math.sin(theta) * r,
-  )
-}
+const ACTIVE_COLOR = '#9ca3af'
+const INACTIVE_COLOR = '#374151'
+const HOVER_COLOR = '#ffffff'
+const BORDER_COLOR = '#000000'
 
-function buildCountryGeo(feat, radius = 1.002) {
-  const positions = []
-  const indices = []
-
-  const processRing = (ring) => {
-    const pts =
-      ring.length > 1 &&
-      ring[0][0] === ring[ring.length - 1][0] &&
-      ring[0][1] === ring[ring.length - 1][1]
-        ? ring.slice(0, -1)
-        : ring
-    if (pts.length < 3) return
-    const contour = pts.map(([lon, lat]) => new THREE.Vector2(lon, lat))
-    let tris
-    try {
-      tris = THREE.ShapeUtils.triangulateShape(contour, [])
-    } catch {
-      return
-    }
-    const base = positions.length / 3
-    pts.forEach(([lon, lat]) => {
-      const { x, y, z } = lonLatToVec3(lon, lat, radius)
-      positions.push(x, y, z)
-    })
-    tris.forEach(([a, b, c]) => indices.push(base + a, base + b, base + c))
-  }
-
-  const { type, coordinates } = feat.geometry
-  if (type === 'Polygon') {
-    processRing(coordinates[0])
-  } else if (type === 'MultiPolygon') {
-    coordinates.forEach((p) => processRing(p[0]))
-  }
-
-  if (indices.length === 0) return null
-
-  const geo = new THREE.BufferGeometry()
-  geo.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3))
-  geo.setIndex(indices)
-  geo.computeVertexNormals()
-  return geo
-}
-
-function buildBorderGeo(topology, radius = 1.003) {
-  const borders = topoMesh(topology, topology.objects.countries)
-  const positions = []
-  borders.coordinates.forEach((line) => {
-    for (let i = 0; i < line.length - 1; i++) {
-      const a = lonLatToVec3(line[i][0], line[i][1], radius)
-      const b = lonLatToVec3(line[i + 1][0], line[i + 1][1], radius)
-      positions.push(a.x, a.y, a.z, b.x, b.y, b.z)
-    }
-  })
-  const geo = new THREE.BufferGeometry()
-  geo.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3))
-  return geo
-}
-
-function CountryMesh({ feat, slug, onNavigate }) {
-  const matRef = useRef()
-  const isClickable = !!slug
-  const baseColor = isClickable ? '#9ca3af' : '#6b7280'
-  const geo = useMemo(() => buildCountryGeo(feat), [feat])
-  if (!geo) return null
-
-  const handlers = isClickable
-    ? {
-        onClick: (e) => {
-          e.stopPropagation()
-          onNavigate(slug)
-        },
-        onPointerOver: (e) => {
-          e.stopPropagation()
-          if (matRef.current) matRef.current.color.set('#ffffff')
-          document.body.style.cursor = 'pointer'
-        },
-        onPointerOut: (e) => {
-          e.stopPropagation()
-          if (matRef.current) matRef.current.color.set(baseColor)
-          document.body.style.cursor = 'default'
-        },
-      }
-    : {}
-
-  return (
-    <mesh geometry={geo} {...handlers}>
-      <meshLambertMaterial ref={matRef} color={baseColor} />
-    </mesh>
-  )
-}
-
-function GlobeScene({ topology, onNavigate }) {
-  const [autoRotate, setAutoRotate] = useState(true)
-
-  const { features } = useMemo(
-    () => topoFeature(topology, topology.objects.countries),
-    [topology],
-  )
-
-  const borderGeo = useMemo(() => buildBorderGeo(topology), [topology])
-
-  return (
-    <>
-      <ambientLight intensity={0.5} />
-      <pointLight position={[5, 5, 5]} intensity={1} />
-      <pointLight position={[-5, -5, -5]} intensity={0.3} />
-
-      <mesh>
-        <sphereGeometry args={[0.999, 64, 64]} />
-        <meshLambertMaterial color="#111827" />
-      </mesh>
-
-      {features.map((feat, i) => (
-        <CountryMesh
-          key={feat.id ?? i}
-          feat={feat}
-          slug={ISO_TO_SLUG[Number(feat.id)]}
-          onNavigate={onNavigate}
-        />
-      ))}
-
-      <lineSegments geometry={borderGeo}>
-        <lineBasicMaterial color="#000000" linewidth={1} />
-      </lineSegments>
-
-      <OrbitControls
-        enableRotate
-        enableZoom={false}
-        enablePan={false}
-        autoRotate={autoRotate}
-        autoRotateSpeed={0.5}
-        onStart={() => setAutoRotate(false)}
-      />
-    </>
-  )
-}
+const isActive = (feat) => ISO_TO_SLUG[Number(feat.id)] !== undefined
 
 export default function Globe3D() {
   const navigate = useNavigate()
+  const globeRef = useRef()
+  const containerRef = useRef()
+
   const [topology, setTopology] = useState(null)
   const [error, setError] = useState(null)
+  const [hoveredPolygon, setHoveredPolygon] = useState(null)
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
+
+  const globeMaterial = useMemo(
+    () => new THREE.MeshLambertMaterial({ color: '#111827' }),
+    [],
+  )
+
+  const countryFeatures = useMemo(() => {
+    if (!topology) return []
+    return topoFeature(topology, topology.objects.countries).features
+  }, [topology])
 
   useEffect(() => {
     fetch('/world-110m.json')
@@ -201,10 +75,76 @@ export default function Globe3D() {
   }, [])
 
   useEffect(() => {
-    return () => {
-      document.body.style.cursor = 'default'
-    }
+    const el = containerRef.current
+    if (!el) return
+    const ro = new ResizeObserver(([entry]) => {
+      const { width, height } = entry.contentRect
+      setDimensions({ width, height })
+    })
+    ro.observe(el)
+    return () => ro.disconnect()
   }, [])
+
+  useEffect(() => {
+    return () => { document.body.style.cursor = 'default' }
+  }, [])
+
+  useEffect(() => {
+    if (!globeRef.current || !topology) return
+    const controls = globeRef.current.controls()
+    controls.enableZoom = false
+    controls.enablePan = false
+    controls.autoRotate = true
+    controls.autoRotateSpeed = 0.3
+
+    let resumeTimer = null
+
+    const onStart = () => {
+      clearTimeout(resumeTimer)
+      controls.autoRotate = false
+    }
+
+    const onEnd = () => {
+      clearTimeout(resumeTimer)
+      resumeTimer = setTimeout(() => {
+        controls.autoRotate = true
+      }, 2500)
+    }
+
+    controls.addEventListener('start', onStart)
+    controls.addEventListener('end', onEnd)
+
+    return () => {
+      clearTimeout(resumeTimer)
+      controls.removeEventListener('start', onStart)
+      controls.removeEventListener('end', onEnd)
+    }
+  }, [topology, dimensions])
+
+  const getCapColor = (feat) => {
+    if (feat === hoveredPolygon && isActive(feat)) return HOVER_COLOR
+    return isActive(feat) ? ACTIVE_COLOR : INACTIVE_COLOR
+  }
+
+  const handleHover = (feat) => {
+    setHoveredPolygon(feat)
+    document.body.style.cursor = feat && isActive(feat) ? 'pointer' : 'default'
+  }
+
+  const handleClick = (feat) => {
+    const slug = ISO_TO_SLUG[Number(feat.id)]
+    if (!slug) return
+    navigate(`/country/${slug}`)
+  }
+
+  const handleZoom = (direction) => {
+    if (!globeRef.current) return
+    const { altitude } = globeRef.current.pointOfView()
+    const next = direction === 'in'
+      ? Math.max(1.5, altitude - 0.3)
+      : Math.min(4.0, altitude + 0.3)
+    globeRef.current.pointOfView({ altitude: next }, 300)
+  }
 
   if (error) {
     return (
@@ -214,26 +154,50 @@ export default function Globe3D() {
     )
   }
 
-  if (!topology) {
-    return (
-      <div className="flex items-center justify-center h-[60vh]">
-        <p className="text-gray-500 font-sans animate-pulse">Küre yükleniyor…</p>
-      </div>
-    )
-  }
+  const isReady = topology && dimensions.width > 0
 
   return (
-    <div className="w-full h-[60vh] relative">
-      <Canvas
-        camera={{ position: [0, 0, 3], fov: 45 }}
-        gl={{ antialias: true, alpha: true }}
-        style={{ background: '#0a0a0a' }}
-      >
-        <GlobeScene
-          topology={topology}
-          onNavigate={(slug) => navigate(`/country/${slug}`)}
-        />
-      </Canvas>
+    <div ref={containerRef} className="w-full relative" style={{ height: '60vh' }}>
+      {isReady ? (
+        <>
+          <Globe
+            ref={globeRef}
+            width={dimensions.width}
+            height={dimensions.height}
+            backgroundColor="rgba(0,0,0,0)"
+            globeMaterial={globeMaterial}
+            showAtmosphere={false}
+            showGraticules={false}
+            polygonsData={countryFeatures}
+            polygonCapColor={getCapColor}
+            polygonSideColor={() => 'rgba(0,0,0,0)'}
+            polygonStrokeColor={() => BORDER_COLOR}
+            polygonAltitude={0.005}
+            onPolygonClick={handleClick}
+            onPolygonHover={handleHover}
+          />
+          <div className="absolute bottom-4 left-4 z-10 flex flex-col gap-1">
+            <button
+              onClick={() => handleZoom('in')}
+              aria-label="Yakınlaştır"
+              className="w-10 h-10 rounded bg-gray-800 hover:bg-gray-700 text-white text-xl font-bold flex items-center justify-center transition-colors"
+            >
+              +
+            </button>
+            <button
+              onClick={() => handleZoom('out')}
+              aria-label="Uzaklaştır"
+              className="w-10 h-10 rounded bg-gray-800 hover:bg-gray-700 text-white text-xl font-bold flex items-center justify-center transition-colors"
+            >
+              −
+            </button>
+          </div>
+        </>
+      ) : (
+        <div className="flex items-center justify-center h-full">
+          <p className="text-gray-500 font-sans animate-pulse">Küre yükleniyor…</p>
+        </div>
+      )}
     </div>
   )
 }

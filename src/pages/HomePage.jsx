@@ -1,11 +1,15 @@
 import Globe3D from '../components/Globe3D'
+import AboutSection from '../components/AboutSection'
 import TheorySection from '../components/TheorySection'
 import TheoryNavigator from '../components/TheoryNavigator'
+import Footer from '../components/Footer'
 import { theories } from '../data/theories'
 
 export default function HomePage() {
   return (
     <main className="bg-[#0a0a0a] min-h-screen">
+      <AboutSection />
+
       <section className="relative flex flex-col items-center justify-center pt-16 pb-8">
         <div className="text-center mb-6 px-4">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-3 tracking-tight">
@@ -24,7 +28,7 @@ export default function HomePage() {
 
       <section className="relative py-24 px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <span className="font-mono text-amber-500 text-sm tracking-widest uppercase">
+          <span className="font-mono text-brand-accent text-sm tracking-widest uppercase">
             Kuramsal Çerçeve
           </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-white mt-3">
@@ -43,6 +47,8 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <Footer />
     </main>
   )
 }
