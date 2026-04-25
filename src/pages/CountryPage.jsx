@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { getCountryById } from '../data/countries'
 import Footer from '../components/Footer'
+import ScrollToTop from '../components/ScrollToTop'
 
 const fadeSlide = {
   initial: { opacity: 0, y: 28 },
@@ -39,6 +40,7 @@ export default function CountryPage() {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
+      <ScrollToTop />
       <div className="max-w-3xl mx-auto px-6 py-12">
         <motion.div {...fadeSlide}>
           <button

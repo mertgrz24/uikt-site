@@ -1,97 +1,82 @@
-# International Relations Explorer — İlerleme Durumu
+# UIKT Site - PROGRESS
 
-**Son güncelleme:** 24 Nisan 2026
+**Son güncelleme:** 25 Nisan 2026
 
 ---
 
-## ✅ Tamamlanan Adımlar
+## Proje Durumu: AKTİF GELİŞTİRME ✅
 
-### Adım 1 — Vite + React 18 Projesi
-- `npm create vite@latest . -- --template react` çalıştırıldı
-- React sürümü 19 → **18.3.1** olarak düzeltildi (`@react-three/fiber ^8.15.0` uyumluluğu için)
-- İki skill yüklendi: `creative-design/scroll-experience`, `creative-design/frontend-design`
+---
 
-### Adım 2 — Tailwind CSS Yapılandırması
-- `tailwind.config.js` oluşturuldu (özel renkler, fontlar, animasyonlar)
-- `postcss.config.js` oluşturuldu
-- `src/index.css` → Tailwind direktifleri + dark theme base + prefers-reduced-motion
-- `index.html` → Başlık + Google Fonts (Inter, Space Grotesk, IBM Plex Mono)
-- `src/App.jsx` → Temiz placeholder'a indirgendi
-- `src/App.css` → Temizlendi
+## Yapılan İşler
 
-### Adım 3 — package.json Bağımlılıkları
-`package.json` CLAUDE.md spesifikasyonuna göre yazıldı:
-- React `^18.3.1`, react-dom `^18.3.1`
-- react-router-dom `^6.26.0`
-- three `^0.160.0`, @react-three/fiber `^8.15.0`, @react-three/drei `^9.92.0`
-- d3-geo `^3.1.0`, topojson-client `^3.1.0`
-- framer-motion `^11.0.0`
-- tailwindcss `^3.4.0`, postcss `^8.4.0`, autoprefixer `^10.4.0`
-- **Kullanıcı `npm install` çalıştırdı → 217 paket, hata yok.**
+### Temel Yapı
+- Vite + React 18 + Tailwind CSS kurulumu
+- React Router (HomePage, CountryPage) — `createBrowserRouter + RouterProvider`
+- Brand renk paleti tanımlı (`tailwind.config.js`):
+  - `brand.primary: #0e3c7d` (koyu lacivert)
+  - `brand.secondary: #2d6cbf` (orta mavi)
+  - `brand.accent: #4a8fd9` (açık mavi)
+  - `brand.gold: #d4a017` (akademik altın)
 
-### Adım 4 — Klasör İskeleti
-Tüm dosyalar boş olarak oluşturuldu:
+### Bileşenler
+- **Navbar** — sabit üst çubuk
+- **AboutSection** — Hakkımızda / Vizyon / Misyon kartları (framer-motion staggered animasyon)
+- **Globe3D** — react-globe.gl tabanlı; zoom butonları sol-alt köşede, otomatik dönüş (2.5s sonra resume), hover/tıklama ile ülke navigasyonu
+- **TheorySection** — 10 teori için tek bileşen (scroll animasyonları `once: false`)
+- **TheoryNavigator** — 12 bölümlük scroll navigatörü: Hakkımızda + Küre + 10 teori; sadece `lg:` ekranlarda görünür
+- **CountryCard** — ülke özet kartı
+- **Footer** — UIKT iletişim, sosyal medya (Instagram, WhatsApp, X, LinkedIn)
+- **ScrollToTop** — route değişiminde sayfa en üste atlar (`HomePage` ve `CountryPage`'e eklendi)
+
+### Veriler
+- `src/data/countries.js` — 30 ülke (Türkiye dahil), Nisan 2026 güncel liderler
+- `src/data/theories.js` — 10 uluslararası ilişkiler teorisi (docx içeriğine birebir sadık)
+
+### Sayfa Akışı
+1. Hakkımızda (üç kart: Hakkımızda / Vizyon / Misyon)
+2. Küre (3D dünya, 30 ülkeden birine tıklayınca CountryPage açılır)
+3. 10 teori bölümü (sırayla, scroll-triggered)
+4. Footer
+
+### Çözülen Önemli Sorunlar
+- Three.js + d3-geo triangulation hataları → `react-globe.gl`'e geçildi (`three` 0.170'e yükseltildi)
+- Scroll/zoom çakışması → `enableZoom` kapatıldı, ayrı zoom butonları eklendi (sol-alt köşe)
+- Animasyon tek seferlik tetiklenme → `viewport: { once: false }` yapıldı
+- Verisi olan/olmayan ülke ayrımı → `ISO_TO_SLUG` ile 30 ülke açık gri, diğerleri koyu gri
+- TheoryNavigator + zoom butonu çakışması → butonlar sol-alt'a taşındı
+- TheoryNavigator 10 → 12 bölüme genişletildi (`sections` prop yapısına geçildi)
+- Sayfa geçişlerinde scroll pozisyonu miras kalması → `ScrollToTop` bileşeni eklendi
+- Footer e-posta mobil taşması → `break-all`, `text-xs md:text-sm`, `text-center` eklendi
+- CountryPage bayrak + başlık dar ekranda taşması → `flex-col sm:flex-row` yapısına geçildi
+
+### Temizlik
+- `Globe3D_OLD.jsx` silindi (yedek gereksiz hale geldi)
+- `README.md` yazıldı (UIKT tanıtımı, teknoloji yığını, proje yapısı, iletişim)
+- Tüm `amber` / `emerald` renk kullanımları `brand-*` paletine dönüştürüldü
+
+---
+
+## Bağımlılıklar
+
+```json
+"react": "^18.3.1"
+"react-dom": "^18.3.1"
+"react-router-dom": "^6.26.0"
+"three": "^0.170.0"
+"react-globe.gl": "^2.37.1"
+"topojson-client": "^3.1.0"
+"framer-motion": "^11.0.0"
+"tailwindcss": "^3.4.0"
 ```
-src/router.jsx
-src/data/countries.js
-src/data/theories.js
-src/pages/HomePage.jsx
-src/pages/CountryPage.jsx
-src/components/Globe3D.jsx
-src/components/TheorySection.jsx
-src/components/TheoryNavigator.jsx
-src/components/CountryCard.jsx
-src/components/Navbar.jsx
-src/hooks/useScrollAnimation.js
-```
-
-### Adım 5 — src/data/countries.js
-30 ülkenin tamamı yazıldı. Her kayıt: `id`, `name`, `capital`, `president`, `population`, `gdp`, `organizations`, `flag`, `description`.
-- Doğrulama geçti: 30 kayıt, eksik alan yok, `getCountryById()` çalışıyor.
-- Nisan 2026 itibarıyla güncel liderler kullanıldı.
 
 ---
 
-## ❌ Tamamlanmayan Adım
+## Sonraki Adımlar
 
-### Adım 6 — src/data/theories.js
-**HENÜZ YAZILMADI.** Oturum burada sonlandı.
-- İçerik `ui_teorileri_rehberi.txt` dosyasından **birebir** aktarılacak.
-- Parafraz, özet veya yorum yapılmayacak.
-- Adım 10 (karşılaştırma tablosu) ayrı bir yapıya sahip olacak.
-
----
-
-## 🔜 Yarın Başlanacak Adım
-
-**Adım 6 → theories.js** ile devam et, ardından sırayla:
-
-| # | Adım | Dosya |
-|---|------|-------|
-| 6 | Teori verisi | `src/data/theories.js` |
-| 7 | 3D Küre bileşeni | `src/components/Globe3D.jsx` |
-| 8 | Ana sayfa | `src/pages/HomePage.jsx` |
-| 9 | Ülke detay sayfası | `src/pages/CountryPage.jsx` |
-| 10 | Teori bölümü + navigatör | `src/components/TheorySection.jsx`, `TheoryNavigator.jsx` |
-| 11 | Router bağlantısı | `src/router.jsx`, `src/main.jsx` |
-| 12 | Stil ve animasyonlar | Genel polish |
-
----
-
-## 📝 Güncelleme Notları
-
-- `three` paketi `0.160.0`'dan `0.170.0`'a yükseltildi — `react-globe.gl` uyumu için.
-
----
-
-## ⚠️ Dikkat Edilmesi Gereken Notlar
-
-1. **world-110m.json eksik.** `public/` klasörüne `https://unpkg.com/world-atlas@2/countries-110m.json` adresinden indirilip `world-110m.json` olarak kaydedilmesi gerekiyor. Globe3D çalışmadan önce bu dosya olmalı.
-
-2. **npm run dev kullanıcı tarafından başlatılacak.** Claude Code bu komutu çalıştırmayacak.
-
-3. **theories.js içeriği `ui_teorileri_rehberi.txt` dosyasından birebir alınacak.** Bu dosya proje kökünde mevcut.
-
-4. **Herhangi bir terminal hatasında Claude Code anında durup kullanıcıya soracak.**
-
-5. **Next.js importu kesinlikle yasak.** Tüm routing `react-router-dom` ile yapılacak.
+| # | İş | Öncelik |
+|---|-----|---------|
+| 1 | **Site yayına alma** — Vercel veya Netlify deploy | Yüksek |
+| 2 | **FPS lag ilk açılışta** — Mac sıcaklığından kaynaklanıyor olabilir; dinlenmiş cihazda tekrar test edilecek | Orta |
+| 3 | **Çift tıklama gerektiren ülke seçimi** — Kritik değil, araştırılacak | Düşük |
+| 4 | **n8n ile otomatik haber çekme entegrasyonu** — Uzun vadeli, isteğe bağlı | Düşük |

@@ -57,7 +57,7 @@ export default function Footer() {
 
         <a
           href="mailto:uluslararasiiliskilervekariyer@gmail.com"
-          className="text-gray-300 hover:text-white text-sm transition-colors"
+          className="text-gray-300 hover:text-white text-xs md:text-sm transition-colors break-all text-center px-4"
         >
           📧 uluslararasiiliskilervekariyer@gmail.com
         </a>

@@ -1,16 +1,63 @@
-# React + Vite
+# UIKT - Uluslararası İlişkiler ve Kariyer Topluluğu
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+UIKT'nin akademik tanıtım sitesi. 3D dünya küresi üzerinden 30 ülkeyi keşfetmenizi ve uluslararası ilişkiler teorilerini öğrenmenizi sağlar.
 
-Currently, two official plugins are available:
+## Özellikler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Etkileşimli 3D dünya küresi (react-globe.gl ile)
+- 30 ülke detay sayfası (başkent, başkan, nüfus, GSYH, üye olduğu kurumlar)
+- 10 uluslararası ilişkiler teorisi (Realizm, Liberalizm, İnşacılık, Marksizm vd.)
+- Scroll-tabanlı animasyonlar (Framer Motion)
+- Tam mobil uyumlu tasarım
 
-## React Compiler
+## Teknoloji Yığını
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 18 + Vite + Tailwind CSS
+- React Router DOM
+- Three.js + react-globe.gl
+- Framer Motion
 
-## Expanding the ESLint configuration
+## Geliştirme
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+Site http://localhost:5173 adresinde açılır.
+
+## Proje Yapısı
+
+```
+src/
+├── data/
+│   ├── countries.js        # 30 ülke verisi
+│   └── theories.js         # 10 uluslararası ilişkiler teorisi
+├── pages/
+│   ├── HomePage.jsx        # Ana sayfa (Hakkımızda + Küre + Teoriler)
+│   └── CountryPage.jsx     # Ülke detay sayfası (/country/:id)
+├── components/
+│   ├── Globe3D.jsx         # 3D dünya küresi
+│   ├── AboutSection.jsx    # Hakkımızda / Vizyon / Misyon kartları
+│   ├── TheorySection.jsx   # Teori içerik bölümü
+│   ├── TheoryNavigator.jsx # Sağ kenar scroll navigatörü (12 bölüm)
+│   ├── CountryCard.jsx     # Ülke özet kartı
+│   ├── Navbar.jsx          # Üst gezinme çubuğu
+│   └── Footer.jsx          # Alt bilgi (iletişim + sosyal medya)
+├── hooks/
+│   └── useScrollAnimation.js
+├── router.jsx              # React Router yapılandırması
+├── main.jsx
+├── App.jsx
+└── index.css
+public/
+└── world-110m.json         # TopoJSON dünya haritası
+```
+
+## İletişim
+
+- E-posta: uluslararasiiliskilervekariyer@gmail.com
+- Instagram: [@banu.uikt](https://www.instagram.com/banu.uikt/)
+- X: [@uiktnews](https://x.com/uiktnews)
+- LinkedIn: [UIKT Grubu](https://www.linkedin.com/groups/9888043/)
+- WhatsApp: [Gruba Katıl](https://chat.whatsapp.com/IXohgyDG2hN0J0CC1Z8HE0)

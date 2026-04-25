@@ -3,6 +3,7 @@ import AboutSection from '../components/AboutSection'
 import TheorySection from '../components/TheorySection'
 import TheoryNavigator from '../components/TheoryNavigator'
 import Footer from '../components/Footer'
+import ScrollToTop from '../components/ScrollToTop'
 import { theories } from '../data/theories'
 
 const sections = [
@@ -18,6 +19,7 @@ const sections = [
 export default function HomePage() {
   return (
     <main className="bg-[#0a0a0a] min-h-screen">
+      <ScrollToTop />
       <div id="about">
         <AboutSection />
       </div>
