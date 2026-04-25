@@ -1,6 +1,6 @@
 # UIKT Site - PROGRESS
 
-**Son güncelleme:** 25 Nisan 2026
+**Son güncelleme:** 25 Nisan 2026 (akşam)
 
 ---
 
@@ -24,7 +24,7 @@
 - **AboutSection** — Hakkımızda / Vizyon / Misyon kartları (framer-motion staggered animasyon)
 - **Globe3D** — react-globe.gl tabanlı; zoom butonları sol-alt köşede, otomatik dönüş (2.5s sonra resume), hover/tıklama ile ülke navigasyonu
 - **TheorySection** — 10 teori için tek bileşen (scroll animasyonları `once: false`)
-- **TheoryNavigator** — 12 bölümlük scroll navigatörü: Hakkımızda + Küre + 10 teori; sadece `lg:` ekranlarda görünür
+- **TheoryNavigator** — 12 bölümlük scroll navigatörü: Hakkımızda + Küre + 10 teori; sadece `lg:` ekranlarda görünür; sadece noktalar (label yok), `title` attr ile tarayıcı tooltip, CSS `hover:bg-gray-500`, IntersectionObserver ile scroll tracking
 - **CountryCard** — ülke özet kartı
 - **Footer** — UIKT iletişim, sosyal medya (Instagram, WhatsApp, X, LinkedIn)
 - **ScrollToTop** — route değişiminde sayfa en üste atlar (`HomePage` ve `CountryPage`'e eklendi)
@@ -49,11 +49,16 @@
 - Sayfa geçişlerinde scroll pozisyonu miras kalması → `ScrollToTop` bileşeni eklendi
 - Footer e-posta mobil taşması → `break-all`, `text-xs md:text-sm`, `text-center` eklendi
 - CountryPage bayrak + başlık dar ekranda taşması → `flex-col sm:flex-row` yapısına geçildi
+- TheoryNavigator etiketleri tamamen kaldırıldı → sadece noktalar, `title` attr ile tooltip, CSS-only hover
+- TheoryNavigator hover efekti state-based'den CSS `hover:bg-gray-500`'e geçildi (state bağımlılığı ortadan kalktı)
 
 ### Temizlik
 - `Globe3D_OLD.jsx` silindi (yedek gereksiz hale geldi)
 - `README.md` yazıldı (UIKT tanıtımı, teknoloji yığını, proje yapısı, iletişim)
 - Tüm `amber` / `emerald` renk kullanımları `brand-*` paletine dönüştürüldü
+
+### Son Commit
+- `663291b` — "TheoryNavigator: etiketler kaldırıldı, sadece noktalar ve title tooltip"
 
 ---
 
@@ -74,9 +79,17 @@
 
 ## Sonraki Adımlar
 
+### ⚡ Yarınki Gündem (Öncelikli)
+
 | # | İş | Öncelik |
 |---|-----|---------|
-| 1 | **Site yayına alma** — Vercel veya Netlify deploy | Yüksek |
-| 2 | **FPS lag ilk açılışta** — Mac sıcaklığından kaynaklanıyor olabilir; dinlenmiş cihazda tekrar test edilecek | Orta |
-| 3 | **Çift tıklama gerektiren ülke seçimi** — Kritik değil, araştırılacak | Düşük |
-| 4 | **n8n ile otomatik haber çekme entegrasyonu** — Uzun vadeli, isteğe bağlı | Düşük |
+| 1 | **Renk değişikliği** — Detay kullanıcı tarafından gelecek | Yüksek |
+| 2 | **Instagram API entegrasyonu** — UIKT geçmiş etkinlikleri Instagram'dan çekilip siteye yansıtılacak | Yüksek |
+
+### Bekleyen / Opsiyonel
+
+| # | İş | Öncelik |
+|---|-----|---------|
+| 3 | **Site yayına alma** — Vercel veya Netlify deploy | Orta |
+| 4 | **Çift tıklama gerektiren ülke seçimi** — Küre dönerken ilk tıklama bazen ülkeyi seçemiyor; kritik değil | Düşük |
+| 5 | **n8n ile otomatik haber çekme entegrasyonu** — Uzun vadeli, isteğe bağlı | Düşük |
