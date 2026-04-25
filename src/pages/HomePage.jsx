@@ -5,12 +5,24 @@ import TheoryNavigator from '../components/TheoryNavigator'
 import Footer from '../components/Footer'
 import { theories } from '../data/theories'
 
+const sections = [
+  { id: 'about', label: 'Hakkımızda', type: 'named' },
+  { id: 'globe', label: 'Küre', type: 'named' },
+  ...theories.map((t, i) => ({
+    id: `theory-${i + 1}`,
+    label: String(i + 1).padStart(2, '0'),
+    type: 'numbered',
+  })),
+]
+
 export default function HomePage() {
   return (
     <main className="bg-[#0a0a0a] min-h-screen">
-      <AboutSection />
+      <div id="about">
+        <AboutSection />
+      </div>
 
-      <section className="relative flex flex-col items-center justify-center pt-16 pb-8">
+      <section id="globe" className="relative flex flex-col items-center justify-center pt-16 pb-8">
         <div className="text-center mb-6 px-4">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-3 tracking-tight">
             International Relations Explorer
@@ -41,9 +53,11 @@ export default function HomePage() {
         </div>
 
         <div className="relative">
-          <TheoryNavigator theories={theories} />
-          {theories.map((theory) => (
-            <TheorySection key={theory.id} theory={theory} />
+          <TheoryNavigator sections={sections} />
+          {theories.map((theory, index) => (
+            <div key={theory.id} id={`theory-${index + 1}`}>
+              <TheorySection theory={theory} />
+            </div>
           ))}
         </div>
       </section>
