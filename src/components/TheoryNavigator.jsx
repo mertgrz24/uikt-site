@@ -35,21 +35,12 @@ export default function TheoryNavigator({ sections }) {
           onClick={() => scrollTo(index)}
           title={section.label}
           aria-label={section.label}
-          className="group flex items-center gap-2 justify-end"
+          className="flex items-center justify-end p-1"
         >
-          <span className={`transition-all duration-200 ${
-            section.type === 'numbered' ? 'text-xs font-mono' : 'text-xs font-sans'
-          } ${
-            active === index
-              ? 'text-brand-accent opacity-100'
-              : 'text-transparent group-hover:text-gray-500 opacity-0 group-hover:opacity-100'
-          }`}>
-            {section.label}
-          </span>
           <span className={`block rounded-full transition-all duration-200 ${
             active === index
               ? 'w-3 h-3 bg-brand-accent'
-              : 'w-2 h-2 bg-gray-700 group-hover:bg-gray-500'
+              : 'w-2 h-2 bg-gray-700 hover:bg-gray-500'
           }`} />
         </button>
       ))}
