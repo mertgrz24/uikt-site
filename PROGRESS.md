@@ -1,6 +1,6 @@
 # UIKT Site - PROGRESS
 
-**Son güncelleme:** 25 Nisan 2026 (akşam)
+**Son güncelleme:** 27 Nisan 2026 (akşam)
 
 ---
 
@@ -13,18 +13,25 @@
 ### Temel Yapı
 - Vite + React 18 + Tailwind CSS kurulumu
 - React Router (HomePage, CountryPage) — `createBrowserRouter + RouterProvider`
-- Brand renk paleti tanımlı (`tailwind.config.js`):
-  - `brand.primary: #0e3c7d` (koyu lacivert)
-  - `brand.secondary: #2d6cbf` (orta mavi)
-  - `brand.accent: #4a8fd9` (açık mavi)
-  - `brand.gold: #d4a017` (akademik altın)
+- Brand renk paleti tanımlı (`tailwind.config.js`) — açık tema:
+  - `brand.bg: #ffffff` (beyaz ana arka plan)
+  - `brand.bgSection: #f8fafc` (çok hafif gri-beyaz)
+  - `brand.bgCard: #f1f5f9` (açık gri kart)
+  - `brand.border: #e2e8f0` (ince açık gri)
+  - `brand.text: #0f172a` (neredeyse siyah)
+  - `brand.textMuted: #475569` (orta gri)
+  - `brand.hover: #eff6ff` (çok açık mavi, hover)
+  - `brand.primary: #0e3c7d` (koyu lacivert — değişmedi)
+  - `brand.secondary: #2d6cbf` (orta mavi — değişmedi)
+  - `brand.accent: #4a8fd9` (açık mavi — değişmedi)
+  - `brand.gold: #d4a017` (akademik altın — değişmedi)
 
 ### Bileşenler
 - **Navbar** — sabit üst çubuk
 - **AboutSection** — Hakkımızda / Vizyon / Misyon kartları (framer-motion staggered animasyon)
 - **Globe3D** — react-globe.gl tabanlı; zoom butonları sol-alt köşede, otomatik dönüş (2.5s sonra resume), hover/tıklama ile ülke navigasyonu
 - **TheorySection** — 10 teori için tek bileşen (scroll animasyonları `once: false`)
-- **TheoryNavigator** — 12 bölümlük scroll navigatörü: Hakkımızda + Küre + 10 teori; sadece `lg:` ekranlarda görünür; sadece noktalar (label yok), `title` attr ile tarayıcı tooltip, CSS `hover:bg-gray-500`, IntersectionObserver ile scroll tracking
+- **TheoryNavigator** — 12 bölümlük scroll navigatörü: Hakkımızda + Küre + 10 teori; sadece `lg:` ekranlarda görünür; sadece noktalar (label yok), `title` attr ile tarayıcı tooltip, CSS `hover:bg-gray-400`, IntersectionObserver ile scroll tracking
 - **CountryCard** — ülke özet kartı
 - **Footer** — UIKT iletişim, sosyal medya (Instagram, WhatsApp, X, LinkedIn)
 - **ScrollToTop** — route değişiminde sayfa en üste atlar (`HomePage` ve `CountryPage`'e eklendi)
@@ -50,15 +57,18 @@
 - Footer e-posta mobil taşması → `break-all`, `text-xs md:text-sm`, `text-center` eklendi
 - CountryPage bayrak + başlık dar ekranda taşması → `flex-col sm:flex-row` yapısına geçildi
 - TheoryNavigator etiketleri tamamen kaldırıldı → sadece noktalar, `title` attr ile tooltip, CSS-only hover
-- TheoryNavigator hover efekti state-based'den CSS `hover:bg-gray-500`'e geçildi (state bağımlılığı ortadan kalktı)
+- TheoryNavigator hover efekti state-based'den CSS `hover:bg-gray-400`'e geçildi (state bağımlılığı ortadan kalktı)
+- **Açık tema (light theme) tüm siteye uygulandı** — beyaz arka plan, `#0e3c7d` marka laciverd korundu
+- **Küre intentionally koyu temada bırakıldı** — karanlık ada efekti, küre görselini bozmamak için
 
 ### Temizlik
 - `Globe3D_OLD.jsx` silindi (yedek gereksiz hale geldi)
 - `README.md` yazıldı (UIKT tanıtımı, teknoloji yığını, proje yapısı, iletişim)
 - Tüm `amber` / `emerald` renk kullanımları `brand-*` paletine dönüştürüldü
+- Eski `bg.*` ve `accent.*` Tailwind grupları kaldırıldı, `brand.*` altında birleştirildi
 
 ### Son Commit
-- `663291b` — "TheoryNavigator: etiketler kaldırıldı, sadece noktalar ve title tooltip"
+- `a8c8500` — "Açık tema tamamlandı"
 
 ---
 
@@ -83,13 +93,18 @@
 
 | # | İş | Öncelik |
 |---|-----|---------|
-| 1 | **Renk değişikliği** — Detay kullanıcı tarafından gelecek | Yüksek |
-| 2 | **Instagram API entegrasyonu** — UIKT geçmiş etkinlikleri Instagram'dan çekilip siteye yansıtılacak | Yüksek |
+| 1 | **Etkinlikler bölümü** — Hakkımızda'nın altına `EventsSection.jsx` eklenecek | Yüksek |
+| 2 | **Instagram API kurulum hazırlığı** — Aşağıdaki ön koşullar tamamlanacak: | Yüksek |
+|   | → UIKT Instagram hesabının Business/Creator mı kişisel mi olduğunu öğren | |
+|   | → Kişisel ise Business'a çevir (ücretsiz, ~2 dakika) | |
+|   | → Meta Developer hesabı oluştur (developers.facebook.com) | |
+|   | → Instagram Graph API token al | |
+| 3 | **n8n entegrasyonu** — tek seferlik çekim → `public/events.json` oluşturulacak | Yüksek |
+| 4 | **EventsSection.jsx** — `events.json`'dan okuyan bileşen yazılacak | Yüksek |
+| 5 | **Deploy** — Vercel veya Netlify | Orta |
 
 ### Bekleyen / Opsiyonel
 
 | # | İş | Öncelik |
 |---|-----|---------|
-| 3 | **Site yayına alma** — Vercel veya Netlify deploy | Orta |
-| 4 | **Çift tıklama gerektiren ülke seçimi** — Küre dönerken ilk tıklama bazen ülkeyi seçemiyor; kritik değil | Düşük |
-| 5 | **n8n ile otomatik haber çekme entegrasyonu** — Uzun vadeli, isteğe bağlı | Düşük |
+| 6 | **Çift tıklama gerektiren ülke seçimi** — Küre dönerken ilk tıklama bazen ülkeyi seçemiyor; kritik değil | Düşük |
