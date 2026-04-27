@@ -8,19 +8,17 @@ export default {
     extend: {
       colors: {
         brand: {
+          bg: '#ffffff',
+          bgSection: '#f8fafc',
+          bgCard: '#f1f5f9',
+          border: '#e2e8f0',
+          text: '#0f172a',
+          textMuted: '#475569',
+          hover: '#eff6ff',
           primary: '#0e3c7d',
           secondary: '#2d6cbf',
           accent: '#4a8fd9',
           gold: '#d4a017',
-        },
-        bg: {
-          primary: '#0a0a0a',
-          secondary: '#111827',
-          tertiary: '#1f2937',
-        },
-        accent: {
-          amber: '#f59e0b',
-          emerald: '#10b981',
         },
         globe: {
           fill: '#9ca3af',

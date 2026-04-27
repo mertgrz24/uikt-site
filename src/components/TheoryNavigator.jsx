@@ -40,7 +40,7 @@ export default function TheoryNavigator({ sections }) {
           <span className={`block rounded-full transition-all duration-200 ${
             active === index
               ? 'w-3 h-3 bg-brand-accent'
-              : 'w-2 h-2 bg-gray-700 hover:bg-gray-500'
+              : 'w-2 h-2 bg-gray-300 hover:bg-gray-400'
           }`} />
         </button>
       ))}

@@ -12,9 +12,9 @@ const fadeSlide = {
 
 function InfoCard({ label, value }) {
   return (
-    <div className="bg-[#111827] border border-gray-800 rounded-xl p-5">
-      <p className="text-gray-500 text-xs font-mono uppercase tracking-widest mb-1">{label}</p>
-      <p className="text-white text-base font-semibold leading-snug">{value}</p>
+    <div className="bg-brand-bgCard border border-brand-border rounded-xl p-5 shadow-sm">
+      <p className="text-brand-textMuted text-xs font-mono uppercase tracking-widest mb-1">{label}</p>
+      <p className="text-brand-text text-base font-semibold leading-snug">{value}</p>
     </div>
   )
 }
@@ -26,11 +26,11 @@ export default function CountryPage() {
 
   if (!country) {
     return (
-      <div className="min-h-screen bg-[#0a0a0a] flex flex-col items-center justify-center gap-4">
-        <p className="text-gray-400 font-sans text-lg">Ülke bulunamadı: <span className="font-mono text-brand-accent">{id}</span></p>
+      <div className="min-h-screen bg-brand-bg flex flex-col items-center justify-center gap-4">
+        <p className="text-brand-textMuted font-sans text-lg">Ülke bulunamadı: <span className="font-mono text-brand-accent">{id}</span></p>
         <button
           onClick={() => navigate('/')}
-          className="text-sm text-gray-500 hover:text-white transition-colors underline underline-offset-4"
+          className="text-sm text-brand-textMuted hover:text-brand-primary transition-colors underline underline-offset-4"
         >
           ← Ana sayfaya dön
         </button>
@@ -39,13 +39,13 @@ export default function CountryPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white">
+    <div className="min-h-screen bg-brand-bg text-brand-text">
       <ScrollToTop />
       <div className="max-w-3xl mx-auto px-6 py-12">
         <motion.div {...fadeSlide}>
           <button
             onClick={() => navigate(-1)}
-            className="mb-10 flex items-center gap-2 text-gray-500 hover:text-white text-sm transition-colors group"
+            className="mb-10 flex items-center gap-2 text-brand-textMuted hover:text-brand-primary text-sm transition-colors group"
           >
             <span className="group-hover:-translate-x-1 transition-transform">←</span>
             Küreye Dön
@@ -56,10 +56,10 @@ export default function CountryPage() {
               {country.flag}
             </span>
             <div>
-              <h1 className="font-display text-3xl md:text-4xl font-bold text-white leading-tight">
+              <h1 className="font-display text-3xl md:text-4xl font-bold text-brand-text leading-tight">
                 {country.name}
               </h1>
-              <p className="text-gray-400 mt-2 text-base leading-relaxed max-w-lg">
+              <p className="text-brand-textMuted mt-2 text-base leading-relaxed max-w-lg">
                 {country.description}
               </p>
             </div>
@@ -72,15 +72,15 @@ export default function CountryPage() {
             <InfoCard label="GSYİH" value={country.gdp} />
           </div>
 
-          <div className="bg-[#111827] border border-gray-800 rounded-xl p-5">
-            <p className="text-gray-500 text-xs font-mono uppercase tracking-widest mb-3">
+          <div className="bg-brand-bgCard border border-brand-border rounded-xl p-5 shadow-sm">
+            <p className="text-brand-textMuted text-xs font-mono uppercase tracking-widest mb-3">
               Üye Olduğu Uluslararası Örgütler
             </p>
             <div className="flex flex-wrap gap-2">
               {country.organizations.map((org) => (
                 <span
                   key={org}
-                  className="px-3 py-1 bg-[#1f2937] text-gray-300 text-sm rounded-full border border-gray-700 font-mono"
+                  className="px-3 py-1 bg-brand-hover text-brand-primary text-sm rounded-full border border-brand-border font-mono font-medium"
                 >
                   {org}
                 </span>

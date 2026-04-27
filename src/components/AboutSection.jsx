@@ -17,14 +17,14 @@ const cards = [
 
 export default function AboutSection() {
   return (
-    <section className="w-full bg-[#0a0a0a] py-20 md:py-28">
+    <section className="w-full bg-brand-bgSection py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
 
         <div className="text-center mb-16">
           <span className="text-sm tracking-widest text-brand-accent uppercase font-mono">
             UIKT Hakkında
           </span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mt-3">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-text mt-3">
             Uluslararası İlişkiler ve Kariyer Topluluğu
           </h2>
           <div className="w-24 h-1 bg-brand-primary mx-auto mt-6 rounded-full" />
@@ -38,11 +38,11 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.6, delay: i * 0.15, ease: [0.4, 0, 0.2, 1] }}
-              className="bg-[#1f2937] border border-[#374151] hover:border-brand-secondary transition-colors duration-300 rounded-2xl p-8"
+              className="bg-brand-bgCard border border-brand-border hover:border-brand-secondary transition-colors duration-300 rounded-2xl p-8 shadow-sm"
             >
               <div className="w-12 h-1 bg-brand-primary mb-4 rounded-full" />
-              <h3 className="text-2xl font-semibold text-white mb-4">{card.title}</h3>
-              <p className="text-[#9ca3af] text-base leading-relaxed">{card.body}</p>
+              <h3 className="text-2xl font-semibold text-brand-text mb-4">{card.title}</h3>
+              <p className="text-brand-textMuted text-base leading-relaxed">{card.body}</p>
             </motion.div>
           ))}
         </div>

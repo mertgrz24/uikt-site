@@ -37,10 +37,10 @@ const ISO_TO_SLUG = {
   804: 'ukraine',
 }
 
-const ACTIVE_COLOR = '#9ca3af'
-const INACTIVE_COLOR = '#374151'
-const HOVER_COLOR = '#ffffff'
-const BORDER_COLOR = '#000000'
+const ACTIVE_COLOR = '#64748b'
+const INACTIVE_COLOR = '#94a3b8'
+const HOVER_COLOR = '#0e3c7d'
+const BORDER_COLOR = '#475569'
 
 const isActive = (feat) => ISO_TO_SLUG[Number(feat.id)] !== undefined
 
@@ -55,7 +55,7 @@ export default function Globe3D() {
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
 
   const globeMaterial = useMemo(
-    () => new THREE.MeshLambertMaterial({ color: '#111827' }),
+    () => new THREE.MeshLambertMaterial({ color: '#e8f0fe' }),
     [],
   )
 
@@ -164,7 +164,7 @@ export default function Globe3D() {
             ref={globeRef}
             width={dimensions.width}
             height={dimensions.height}
-            backgroundColor="rgba(0,0,0,0)"
+            backgroundColor="rgba(255,255,255,0)"
             globeMaterial={globeMaterial}
             showAtmosphere={false}
             showGraticules={false}
@@ -180,14 +180,14 @@ export default function Globe3D() {
             <button
               onClick={() => handleZoom('in')}
               aria-label="Yakınlaştır"
-              className="w-10 h-10 rounded bg-gray-800 hover:bg-gray-700 text-white text-xl font-bold flex items-center justify-center transition-colors"
+              className="w-10 h-10 rounded bg-brand-bgCard border border-brand-border hover:bg-brand-hover text-brand-text text-xl font-bold flex items-center justify-center transition-colors shadow-sm"
             >
               +
             </button>
             <button
               onClick={() => handleZoom('out')}
               aria-label="Uzaklaştır"
-              className="w-10 h-10 rounded bg-gray-800 hover:bg-gray-700 text-white text-xl font-bold flex items-center justify-center transition-colors"
+              className="w-10 h-10 rounded bg-brand-bgCard border border-brand-border hover:bg-brand-hover text-brand-text text-xl font-bold flex items-center justify-center transition-colors shadow-sm"
             >
               −
             </button>
@@ -195,7 +195,7 @@ export default function Globe3D() {
         </>
       ) : (
         <div className="flex items-center justify-center h-full">
-          <p className="text-gray-500 font-sans animate-pulse">Küre yükleniyor…</p>
+          <p className="text-brand-textMuted font-sans animate-pulse">Küre yükleniyor…</p>
         </div>
       )}
     </div>
