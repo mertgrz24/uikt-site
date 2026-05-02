@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import * as THREE from 'three'
 import { feature as topoFeature } from 'topojson-client'
 import Globe from 'react-globe.gl'
+import { countries } from '../data/countries'
 
 const ISO_TO_SLUG = {
   792: 'turkey',
@@ -49,6 +50,9 @@ export default function Globe3D() {
   const globeRef = useRef()
   const containerRef = useRef()
 
+  const [isMobile, setIsMobile] = useState(
+    () => typeof window !== 'undefined' && window.innerWidth < 768
+  )
   const [topology, setTopology] = useState(null)
   const [error, setError] = useState(null)
   const [hoveredPolygon, setHoveredPolygon] = useState(null)
@@ -144,6 +148,36 @@ export default function Globe3D() {
       ? Math.max(1.5, altitude - 0.3)
       : Math.min(4.0, altitude + 0.3)
     globeRef.current.pointOfView({ altitude: next }, 300)
+  }
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768)
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
+
+  if (isMobile) {
+    return (
+      <div className="w-full px-4 py-6">
+        <p className="text-brand-textMuted text-xs font-mono uppercase tracking-widest text-center mb-4">
+          Ülke Seçin
+        </p>
+        <div className="grid grid-cols-2 gap-2">
+          {countries.map((country) => (
+            <button
+              key={country.id}
+              onClick={() => navigate(`/country/${country.id}`)}
+              className="flex items-center gap-2 px-3 py-2.5 bg-brand-bgCard border border-brand-border hover:border-brand-secondary hover:bg-brand-hover rounded-xl text-left transition-colors duration-200"
+            >
+              <span className="text-xl leading-none">{country.flag}</span>
+              <span className="text-brand-text text-sm font-medium leading-snug truncate">
+                {country.name}
+              </span>
+            </button>
+          ))}
+        </div>
+      </div>
+    )
   }
 
   if (error) {
