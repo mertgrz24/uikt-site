@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { getCountryById } from '../data/countries'
+import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ScrollToTop from '../components/ScrollToTop'
 
@@ -41,6 +42,7 @@ export default function CountryPage() {
   return (
     <div className="min-h-screen bg-brand-bg text-brand-text">
       <ScrollToTop />
+      <Navbar />
       <div className="max-w-3xl mx-auto px-6 py-12">
         <motion.div {...fadeSlide}>
           <button

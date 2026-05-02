@@ -3,6 +3,7 @@ import AboutSection from '../components/AboutSection'
 import EventsSection from '../components/EventsSection'
 import TheorySection from '../components/TheorySection'
 import TheoryNavigator from '../components/TheoryNavigator'
+import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ScrollToTop from '../components/ScrollToTop'
 import { theories } from '../data/theories'
@@ -21,6 +22,7 @@ export default function HomePage() {
   return (
     <main className="bg-brand-bg min-h-screen">
       <ScrollToTop />
+      <Navbar />
       <div id="about">
         <AboutSection />
       </div>
