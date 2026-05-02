@@ -7,7 +7,15 @@ export default function Navbar() {
         <Link to="/" className="font-display text-sm font-semibold text-brand-text hover:text-brand-accent transition-colors">
           IR Explorer
         </Link>
-        <span className="text-brand-textMuted text-xs font-mono">v1.0</span>
+        <div className="flex items-center gap-4">
+          <Link
+            to="/verify"
+            className="text-xs font-mono text-brand-textMuted hover:text-brand-primary transition-colors"
+          >
+            Belge Doğrula
+          </Link>
+          <span className="text-brand-textMuted text-xs font-mono">v1.0</span>
+        </div>
       </div>
     </nav>
   )

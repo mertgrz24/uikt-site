@@ -1,6 +1,6 @@
 # UIKT Site - PROGRESS
 
-**Son güncelleme:** 2 Mayıs 2026
+**Son güncelleme:** 2 Mayıs 2026 — mobil optimizasyon
 
 ---
 
@@ -67,6 +67,12 @@
 - **`image` alanı** boşsa emoji gösterir, doluysa fotoğraf gösterir (ileride kullanılmaya hazır)
 - **`HomePage.jsx`**'e eklendi — AboutSection altına, Globe3D önüne
 
+### Mobil Optimizasyon (2 Mayıs 2026)
+- **`src/utils/motion.jsx`** oluşturuldu — `window.innerWidth < 768` kontrolüyle: mobilde `MotionDiv/MotionH2/MotionBlockquote` düz HTML elementleri döndürür, masaüstünde `framer-motion` dinamik import ile yüklenir (`await import('framer-motion')`)
+- **framer-motion mobilde hiç yüklenmiyor** — `AboutSection`, `TheorySection`, `EventsSection` artık `motion.*` yerine `MotionDiv/MotionH2/MotionBlockquote` kullanıyor; TheorySection'daki kullanılmayan `useInView` import'u da temizlendi
+- **Globe3D mobil görünüm** — `< 768px` ekranda Three.js / react-globe.gl hiç yüklenmez; yerine `countries.js`'teki 30 ülke 2 kolonlu buton grid olarak listelenir, tıklayınca `/country/{slug}` sayfasına yönlendirir; masaüstünde küre aynen çalışır
+- **`vite.config.js` — `build.target: 'esnext'`** eklendi; top-level `await` gerektiren dynamic import için gerekli (Vercel build hatası giderildi)
+
 ### Temizlik
 - `Globe3D_OLD.jsx` silindi (yedek gereksiz hale geldi)
 - `README.md` yazıldı (UIKT tanıtımı, teknoloji yığını, proje yapısı, iletişim)
@@ -103,6 +109,12 @@
 | 1 | **Etkinlik görselleri** — zip hazır; `public/events/` klasörüne atılacak, `events.json` image alanları doldurulacak | Yüksek |
 | 2 | **Favicon + site başlığı** — tarayıcı sekmesi | Orta |
 | 3 | **Deploy** — Vercel | Orta |
+
+### 📅 Yarın (3 Mayıs 2026)
+
+| # | İş | Not |
+|---|-----|-----|
+| 1 | **Google Sheets bağlantılı belge doğrulama sistemi** — eklenti veya API entegrasyonu | Yeni özellik |
 
 ### Bekleyen / Opsiyonel
 
