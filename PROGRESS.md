@@ -79,6 +79,11 @@
 - Tüm `amber` / `emerald` renk kullanımları `brand-*` paletine dönüştürüldü
 - Eski `bg.*` ve `accent.*` Tailwind grupları kaldırıldı, `brand.*` altında birleştirildi
 
+### Belge Doğrulama (3 Mayıs 2026)
+- **`src/pages/VerificationPage.jsx`** oluşturuldu — belge numarası girişi, loading/success/error state'leri, InfoCard ile Ad/Soyad/Etkinlik gösterimi, framer-motion animasyonu
+- **`/verify` rotası** `router.jsx`'e eklendi
+- **Navbar** `HomePage.jsx` ve `CountryPage.jsx`'e eklendi (daha önce hiçbir sayfada render edilmiyordu)
+
 ### Son Commit
 - `a8c8500` — "Açık tema tamamlandı"
 - `EventsSection eklendi` — 14 UIKT etkinliği, emoji ikonlar
@@ -106,15 +111,10 @@
 
 | # | İş | Öncelik |
 |---|-----|---------|
-| 1 | **Etkinlik görselleri** — zip hazır; `public/events/` klasörüne atılacak, `events.json` image alanları doldurulacak | Yüksek |
-| 2 | **Favicon + site başlığı** — tarayıcı sekmesi | Orta |
-| 3 | **Deploy** — Vercel | Orta |
-
-### 📅 Yarın (3 Mayıs 2026)
-
-| # | İş | Not |
-|---|-----|-----|
-| 1 | **Google Sheets bağlantılı belge doğrulama sistemi** — eklenti veya API entegrasyonu | Yeni özellik |
+| 1 | **Google Apps Script düzeltmesi** — `Code.gs`'teki `doGet` JSON yerine HTML döndürüyor; `ContentService.createTextOutput(JSON.stringify(...)).setMimeType(ContentService.MimeType.JSON)` yapısına geçilecek, yeniden deploy edilecek, yeni URL `VerificationPage.jsx`'e yazılacak | **Kritik** |
+| 2 | **Etkinlik görselleri** — zip hazır; `public/events/` klasörüne atılacak, `events.json` image alanları doldurulacak | Yüksek |
+| 3 | **Favicon + site başlığı** — tarayıcı sekmesi | Orta |
+| 4 | **Deploy** — Vercel | Orta |
 
 ### Bekleyen / Opsiyonel
 
