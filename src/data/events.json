@@ -1,0 +1,128 @@
+[
+  {
+    "id": "1",
+    "title": "Erasmus Plus – ESC Etkinliği",
+    "date": "2022-12-09",
+    "type": "seminer",
+    "description": "Erasmus+ bursluluk fırsatları, akademik değişim programları ve Avrupa Dayanışma Programı (ESC) kapsamında gönüllülük deneyimleri ele alındı. Sertifikalı, iki oturumlu etkinlik.",
+    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "image": ""
+  },
+  {
+    "id": "2",
+    "title": "Speaking Club Etkinliği",
+    "date": "2022-12-30",
+    "type": "atölye",
+    "description": "İngilizce konuşma becerilerini geliştirmeye yönelik interaktif dil pratiği etkinliği. Günlük konuşma egzersizleri ve grup tartışmaları gerçekleştirildi.",
+    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "image": ""
+  },
+  {
+    "id": "3",
+    "title": "Tekerlekli Sandalye Sosyal Sorumluluk Projesi",
+    "date": "2023-01-09",
+    "type": "sosyal sorumluluk",
+    "description": "Bandırma'da ihtiyaç sahibi bir çocuğa tekerlekli sandalye yardımı ulaştırıldı. Ekol Ortopedi iş birliğiyle yürütülen gönüllülük faaliyeti.",
+    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "image": ""
+  },
+  {
+    "id": "4",
+    "title": "Kaymakamlık ve Kamuda Kariyer",
+    "date": "2023-05-06",
+    "type": "seminer",
+    "description": "Yakın Eğitim iş birliğiyle düzenlenen etkinlikte kamu yönetiminde kariyer, KPSS ve mülakat süreçleri ele alındı. Konuşmacılar: Cengiz Han Gökben, Levent Ersin Orallı.",
+    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "image": ""
+  },
+  {
+    "id": "5",
+    "title": "Speaking Club Etkinlikleri Serisi",
+    "date": "2023-10-22",
+    "type": "atölye",
+    "description": "Novo Lounge'da yabancı uyruklu eğitmenlerle (Henry/YDS Akademi, Stanford ve Zubair/Bandırma İstek Okulu) düzenlenen periyodik İngilizce konuşma pratiği seansları.",
+    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "image": ""
+  },
+  {
+    "id": "6",
+    "title": "Kaymakamlık Mesleği Konulu Etkinlik",
+    "date": "2023-12-20",
+    "type": "seminer",
+    "description": "Aktif görevdeki Kaymakam Abdullah Atakan Atasoy'un katılımıyla gerçekleştirilen sertifikalı etkinlik. Kaymakamlık sınavından göreve başlama sürecine kadar deneyimler paylaşıldı.",
+    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "image": ""
+  },
+  {
+    "id": "7",
+    "title": "UİKT II. Konferansı",
+    "date": "2024-05-30",
+    "type": "konferans",
+    "description": "19., 23. ve 24. Dönem Balıkesir Milletvekili ve 2004-2007 Bandırma Belediye Başkanı Mehmet Cemal Öztaylan'ın katılımıyla Türkiye'nin siyasi ve ekonomik dönüşüm süreçleri ele alındı.",
+    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "image": ""
+  },
+  {
+    "id": "8",
+    "title": "Ankara Gezisi ve Kurumsal Ziyaretler",
+    "date": "2024-06-04",
+    "type": "gezi",
+    "description": "TBMM ve Dışişleri Bakanlığı Stratejik Araştırmalar Merkezi (SAM) ziyaret edildi. Yasama süreçleri ve Türkiye'nin dış politika gündemi yerinde incelendi.",
+    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "image": ""
+  },
+  {
+    "id": "9",
+    "title": "Yeni Dönem Tanışma ve Bilgilendirme Etkinliği",
+    "date": "2024-09-28",
+    "type": "toplantı",
+    "description": "2024-2025 dönemi açılış etkinliği. Yeni üyelerle tanışma, geçmiş dönem başarıları ve yıl içi planlanan projeler hakkında bilgilendirme yapıldı.",
+    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "image": ""
+  },
+  {
+    "id": "10",
+    "title": "Kendi İşini Kurma Hikayeleri: İlham Veren Girişimcilerle Buluşma",
+    "date": "2025-04-29",
+    "type": "panel",
+    "description": "ÜNİDES iş birliği ve Gençlik ve Spor Bakanlığı desteğiyle düzenlendi. GMKA, KOSGEB, İŞ-KUR ve özel sektörden 6 konuşmacı girişimcilik deneyimlerini paylaştı.",
+    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "image": ""
+  },
+  {
+    "id": "11",
+    "title": "Fidan Dikimi Çevre Etkinliği",
+    "date": "2025-11-07",
+    "type": "sosyal sorumluluk",
+    "description": "'Hayaller Doğada Yeşillenir' temasıyla Bandırma TED Koleji iş birliğinde düzenlenen çevre farkındalığı etkinliği. Farklı yaş gruplarından katılımcılar fidan dikti.",
+    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "image": ""
+  },
+  {
+    "id": "12",
+    "title": "30 Altı Gençlik Zirvesi",
+    "date": "2026-01-28",
+    "type": "zirve",
+    "description": "Gençlik ve Spor Bakanlığı tarafından Ankara'da düzenlendi. 18 üniversiteden ~500 öğrencinin katıldığı zirvede TBMM, Anıtkabir, Cumhurbaşkanlığı Külliyesi ve AFAD ziyaret edildi.",
+    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "image": ""
+  },
+  {
+    "id": "13",
+    "title": "Dünya İnsani Yardımın Kalbi: WFP ile Tanışma ve Kariyer",
+    "date": "2026-03-31",
+    "type": "webinar",
+    "description": "BM Dünya Gıda Programı (WFP) Türkiye Ortaklık Sorumlusu Zeynep Özkan ile çevrim içi webinar. Küresel gıda güvenliği, insani diplomasi ve BM kariyer fırsatları ele alındı.",
+    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "image": ""
+  },
+  {
+    "id": "14",
+    "title": "Etkili LinkedIn Profili Oluşturma ve CV Yazma",
+    "date": "2026-04-06",
+    "type": "atölye",
+    "description": "Kontenjan sınırlı, sertifikalı workshop. LinkedIn profil optimizasyonu, CV hazırlama ve kişisel markalaşma ilkeleri uygulamalı olarak ele alındı.",
+    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "image": ""
+  }
+]

@@ -1,6 +1,6 @@
 # UIKT Site - PROGRESS
 
-**Son güncelleme:** 27 Nisan 2026 (akşam)
+**Son güncelleme:** 2 Mayıs 2026
 
 ---
 
@@ -61,6 +61,12 @@
 - **Açık tema (light theme) tüm siteye uygulandı** — beyaz arka plan, `#0e3c7d` marka laciverd korundu
 - **Küre intentionally koyu temada bırakıldı** — karanlık ada efekti, küre görselini bozmamak için
 
+### Etkinlikler
+- **`src/data/events.json`** oluşturuldu — 14 gerçek UIKT etkinliği (2022–2026), tarih sıralı
+- **`EventsSection.jsx`** oluşturuldu — emoji ikonlar (`TYPE_EMOJI` map), tip rozetleri (renk bazında), Türkçe tarih formatı, framer-motion `whileInView` animasyonu
+- **`image` alanı** boşsa emoji gösterir, doluysa fotoğraf gösterir (ileride kullanılmaya hazır)
+- **`HomePage.jsx`**'e eklendi — AboutSection altına, Globe3D önüne
+
 ### Temizlik
 - `Globe3D_OLD.jsx` silindi (yedek gereksiz hale geldi)
 - `README.md` yazıldı (UIKT tanıtımı, teknoloji yığını, proje yapısı, iletişim)
@@ -69,6 +75,7 @@
 
 ### Son Commit
 - `a8c8500` — "Açık tema tamamlandı"
+- `EventsSection eklendi` — 14 UIKT etkinliği, emoji ikonlar
 
 ---
 
@@ -89,22 +96,16 @@
 
 ## Sonraki Adımlar
 
-### ⚡ Yarınki Gündem (Öncelikli)
+### ⚡ Sonraki Gündem (Öncelikli)
 
 | # | İş | Öncelik |
 |---|-----|---------|
-| 1 | **Etkinlikler bölümü** — Hakkımızda'nın altına `EventsSection.jsx` eklenecek | Yüksek |
-| 2 | **Instagram API kurulum hazırlığı** — Aşağıdaki ön koşullar tamamlanacak: | Yüksek |
-|   | → UIKT Instagram hesabının Business/Creator mı kişisel mi olduğunu öğren | |
-|   | → Kişisel ise Business'a çevir (ücretsiz, ~2 dakika) | |
-|   | → Meta Developer hesabı oluştur (developers.facebook.com) | |
-|   | → Instagram Graph API token al | |
-| 3 | **n8n entegrasyonu** — tek seferlik çekim → `public/events.json` oluşturulacak | Yüksek |
-| 4 | **EventsSection.jsx** — `events.json`'dan okuyan bileşen yazılacak | Yüksek |
-| 5 | **Deploy** — Vercel veya Netlify | Orta |
+| 1 | **Etkinlik görselleri** — zip hazır; `public/events/` klasörüne atılacak, `events.json` image alanları doldurulacak | Yüksek |
+| 2 | **Favicon + site başlığı** — tarayıcı sekmesi | Orta |
+| 3 | **Deploy** — Vercel | Orta |
 
 ### Bekleyen / Opsiyonel
 
 | # | İş | Öncelik |
 |---|-----|---------|
-| 6 | **Çift tıklama gerektiren ülke seçimi** — Küre dönerken ilk tıklama bazen ülkeyi seçemiyor; kritik değil | Düşük |
+| 4 | **Çift tıklama gerektiren ülke seçimi** — Küre dönerken ilk tıklama bazen ülkeyi seçemiyor; kritik değil | Düşük |

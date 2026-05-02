@@ -1,5 +1,6 @@
 import Globe3D from '../components/Globe3D'
 import AboutSection from '../components/AboutSection'
+import EventsSection from '../components/EventsSection'
 import TheorySection from '../components/TheorySection'
 import TheoryNavigator from '../components/TheoryNavigator'
 import Footer from '../components/Footer'
@@ -23,6 +24,8 @@ export default function HomePage() {
       <div id="about">
         <AboutSection />
       </div>
+
+      <EventsSection />
 
       <section id="globe" className="relative flex flex-col items-center justify-center pt-16 pb-8 bg-brand-bg border-t border-brand-border">
         <div className="text-center mb-6 px-4">
