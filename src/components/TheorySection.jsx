@@ -1,5 +1,4 @@
 import { useRef } from 'react'
-import { useInView } from 'framer-motion'
 import { MotionDiv, MotionH2, MotionBlockquote } from '../utils/motion'
 
 const fadeUp = (delay = 0) => ({
