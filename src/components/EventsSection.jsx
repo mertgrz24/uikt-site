@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { MotionDiv } from '../utils/motion'
 import eventsData from '../data/events.json'
 
 const TYPE_EMOJI = {
@@ -35,7 +35,7 @@ function EventCard({ event, index }) {
   const badgeClass = TYPE_COLOR[event.type] ?? 'bg-gray-100 text-gray-700'
 
   return (
-    <motion.div
+    <MotionDiv
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.2 }}
@@ -86,7 +86,7 @@ function EventCard({ event, index }) {
           Instagram'da Gör
         </a>
       </div>
-    </motion.div>
+    </MotionDiv>
   )
 }
 

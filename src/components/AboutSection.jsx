@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { MotionDiv } from '../utils/motion'
 
 const cards = [
   {
@@ -32,7 +32,7 @@ export default function AboutSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {cards.map((card, i) => (
-            <motion.div
+            <MotionDiv
               key={card.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ export default function AboutSection() {
               <div className="w-12 h-1 bg-brand-primary mb-4 rounded-full" />
               <h3 className="text-2xl font-semibold text-brand-text mb-4">{card.title}</h3>
               <p className="text-brand-textMuted text-base leading-relaxed">{card.body}</p>
-            </motion.div>
+            </MotionDiv>
           ))}
         </div>
 

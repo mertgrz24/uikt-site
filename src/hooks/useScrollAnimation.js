@@ -3,6 +3,7 @@ import { useRef } from 'react'
 
 export function useScrollAnimation(options = {}) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: false, amount: 0.3, ...options })
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+  const isInView = useInView(ref, { once: isMobile, amount: 0.3, ...options })
   return { ref, isInView }
 }

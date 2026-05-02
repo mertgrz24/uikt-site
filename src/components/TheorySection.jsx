@@ -1,5 +1,6 @@
 import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { useInView } from 'framer-motion'
+import { MotionDiv, MotionH2, MotionBlockquote } from '../utils/motion'
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 32 },
@@ -67,41 +68,41 @@ export default function TheorySection({ theory }) {
     >
       <div className="max-w-5xl mx-auto w-full">
         <div className="flex flex-col md:flex-row gap-8 md:gap-16">
-          <motion.div
+          <MotionDiv
             className="flex-shrink-0"
             {...fadeUp(0)}
           >
             <span className="font-mono text-[5rem] md:text-[7rem] font-bold text-[#cbd5e1] leading-none select-none">
               {theory.number}
             </span>
-          </motion.div>
+          </MotionDiv>
 
           <div className="flex-1 min-w-0">
-            <motion.h2
+            <MotionH2
               className="font-display text-2xl md:text-3xl font-bold text-brand-text mb-4 leading-tight"
               {...fadeUp(0.05)}
             >
               {theory.title}
-            </motion.h2>
+            </MotionH2>
 
-            <motion.div
+            <MotionDiv
               className="bg-brand-primary/10 border border-brand-secondary/30 rounded-xl px-5 py-4 mb-6"
               {...fadeUp(0.1)}
             >
               <p className="text-brand-accent text-sm leading-relaxed font-medium">
                 {theory.summary}
               </p>
-            </motion.div>
+            </MotionDiv>
 
             {theory.coreIdea && (
-              <motion.div className="mb-6" {...fadeUp(0.15)}>
+              <MotionDiv className="mb-6" {...fadeUp(0.15)}>
                 <h3 className="text-brand-textMuted text-xs font-mono uppercase tracking-widest mb-2">Temel Fikir</h3>
                 <p className="text-brand-text text-sm leading-relaxed">{theory.coreIdea}</p>
-              </motion.div>
+              </MotionDiv>
             )}
 
             {theory.keyConcepts && theory.keyConcepts.length > 0 && (
-              <motion.div className="mb-6" {...fadeUp(0.2)}>
+              <MotionDiv className="mb-6" {...fadeUp(0.2)}>
                 <h3 className="text-brand-textMuted text-xs font-mono uppercase tracking-widest mb-3">Temel Kavramlar</h3>
                 <ul className="space-y-1.5">
                   {theory.keyConcepts.map((concept, i) => (
@@ -111,11 +112,11 @@ export default function TheorySection({ theory }) {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </MotionDiv>
             )}
 
             {theory.subSchools && theory.subSchools.length > 0 && (
-              <motion.div className="mb-6" {...fadeUp(0.22)}>
+              <MotionDiv className="mb-6" {...fadeUp(0.22)}>
                 <h3 className="text-brand-textMuted text-xs font-mono uppercase tracking-widest mb-3">Alt Akımlar</h3>
                 <ul className="space-y-1.5">
                   {theory.subSchools.map((school, i) => (
@@ -125,29 +126,29 @@ export default function TheorySection({ theory }) {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </MotionDiv>
             )}
 
             {theory.thinkers && theory.thinkers.length > 0 && (
-              <motion.div className="mb-6" {...fadeUp(0.25)}>
+              <MotionDiv className="mb-6" {...fadeUp(0.25)}>
                 <h3 className="text-brand-textMuted text-xs font-mono uppercase tracking-widest mb-3">Önemli Düşünürler</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {theory.thinkers.map((t, i) => (
                     <ThinkerCard key={i} name={t.name} description={t.description} />
                   ))}
                 </div>
-              </motion.div>
+              </MotionDiv>
             )}
 
             {theory.relations && (
-              <motion.div className="mb-6" {...fadeUp(0.3)}>
+              <MotionDiv className="mb-6" {...fadeUp(0.3)}>
                 <h3 className="text-brand-textMuted text-xs font-mono uppercase tracking-widest mb-2">Diğer Teorilerle İlişkisi</h3>
                 <p className="text-brand-text text-sm leading-relaxed">{theory.relations}</p>
-              </motion.div>
+              </MotionDiv>
             )}
 
             {theory.criticisms && theory.criticisms.length > 0 && (
-              <motion.div className="mb-6" {...fadeUp(0.32)}>
+              <MotionDiv className="mb-6" {...fadeUp(0.32)}>
                 <h3 className="text-brand-textMuted text-xs font-mono uppercase tracking-widest mb-3">Eleştiriler</h3>
                 <ul className="space-y-1.5">
                   {theory.criticisms.map((c, i) => (
@@ -157,18 +158,18 @@ export default function TheorySection({ theory }) {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </MotionDiv>
             )}
 
             {theory.isComparison && theory.comparisonTable && (
-              <motion.div className="mb-6" {...fadeUp(0.35)}>
+              <MotionDiv className="mb-6" {...fadeUp(0.35)}>
                 <h3 className="text-brand-textMuted text-xs font-mono uppercase tracking-widest mb-2">Karşılaştırma Tablosu</h3>
                 <ComparisonTable rows={theory.comparisonTable} />
-              </motion.div>
+              </MotionDiv>
             )}
 
             {theory.usageGuide && theory.usageGuide.length > 0 && (
-              <motion.div className="mb-6" {...fadeUp(0.38)}>
+              <MotionDiv className="mb-6" {...fadeUp(0.38)}>
                 <h3 className="text-brand-textMuted text-xs font-mono uppercase tracking-widest mb-3">Teori Seçim Rehberi</h3>
                 <ul className="space-y-1.5">
                   {theory.usageGuide.map((item, i) => (
@@ -178,16 +179,16 @@ export default function TheorySection({ theory }) {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </MotionDiv>
             )}
 
             {theory.closingQuote && (
-              <motion.blockquote
+              <MotionBlockquote
                 className="mt-8 border-l-2 border-brand-secondary/40 pl-5 italic text-brand-textMuted text-sm leading-relaxed"
                 {...fadeUp(0.4)}
               >
                 {theory.closingQuote}
-              </motion.blockquote>
+              </MotionBlockquote>
             )}
           </div>
         </div>
