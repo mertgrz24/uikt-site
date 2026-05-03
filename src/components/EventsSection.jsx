@@ -102,7 +102,7 @@ export default function EventsSection() {
             Geçmiş & Güncel
           </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-text mt-3">
-            Etkinliklerimiz
+            Faaliyetlerimiz
           </h2>
           <div className="w-24 h-1 bg-brand-primary mx-auto mt-6 rounded-full" />
           <p className="text-brand-textMuted mt-6 max-w-xl mx-auto text-base">
