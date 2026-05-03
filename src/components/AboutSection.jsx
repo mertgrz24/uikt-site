@@ -3,15 +3,15 @@ import { MotionDiv } from '../utils/motion'
 const cards = [
   {
     title: 'Hakkımızda',
-    body: 'Uluslararası İlişkiler ve Kariyer Topluluğu, öğrencilerin akademik gelişimlerini desteklemek, kariyer hedeflerine ulaşmalarına katkı sağlamak ve küresel bakış açısı kazandırmak amacıyla kurulmuş dinamik bir öğrenci topluluğudur. Uluslararası ilişkiler, siyasi tarih ve kariyer planlaması alanlarında seminerler, webinarlar ve eğitim programları düzenleyerek üyelerine hem teorik hem de pratik bilgi sunmaktadır. Alanında uzman akademisyenler ve profesyonellerle öğrencileri bir araya getirerek sertifika destekli etkinliklerle akademik ve profesyonel gelişime katkı sağlamaktadır.',
+    body: 'Uluslararası İlişkiler ve Kariyer Topluluğu (UİKT), Bandırma Onyedi Eylül Üniversitesi bünyesinde faaliyet gösteren akademik ve sosyal odaklı bir öğrenci topluluğudur. Topluluğumuz; uluslararası farkındalık, kariyer geliştirme, sosyal sorumluluk ve dil becerileri gibi geniş bir yelpazede etkinlikler düzenleyerek öğrencilerin çok boyutlu gelişimine katkı sağlamayı hedeflemektedir.',
   },
   {
-    title: 'Vizyon',
-    body: 'Uluslararası ilişkiler alanında bilinçli, analitik düşünebilen ve küresel gelişmeleri doğru yorumlayabilen bireyler yetiştirmek. Ulusal ve uluslararası düzeyde söz sahibi olacak genç liderlerin gelişimine katkı sağlayarak, akademik bilgi ile pratik deneyimi birleştiren, üyelerin kariyer yolculuklarında fark yaratan bir topluluk olmak.',
+    title: 'Misyonumuz',
+    body: 'Uluslararası ilişkiler alanında bilgi ve deneyim paylaşımını teşvik ederek, öğrencilerin kariyer hedeflerine ulaşmalarına yardımcı olmak.',
   },
   {
-    title: 'Misyon',
-    body: 'Üyelerimize uluslararası ilişkiler, siyaset bilimi ve kariyer gelişimi alanlarında nitelikli etkinlikler sunmak; seminerler, webinarlar, atölyeler ve projeler aracılığıyla bilgi paylaşımını artırmak. Alanında uzman isimlerle öğrencileri buluşturarak teorik bilgiyi uygulama ile desteklemek ve ekip çalışması, liderlik ve sosyal sorumluluk bilincini güçlendiren projeler üretmek.',
+    title: 'Vizyonumuz',
+    body: 'Küresel perspektife sahip, liderlik becerileri geliştiren ve uluslararası ilişkiler alanında etkili profesyoneller yetiştiren öncü bir topluluk olmak.',
   },
 ]
 
