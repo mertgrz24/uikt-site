@@ -1,6 +1,6 @@
 # UIKT Site - PROGRESS
 
-**Son güncelleme:** 2 Mayıs 2026 — mobil optimizasyon
+**Son güncelleme:** 3 Mayıs 2026 — belge doğrulama entegrasyonu tamamlandı
 
 ---
 
@@ -83,6 +83,8 @@
 - **`src/pages/VerificationPage.jsx`** oluşturuldu — belge numarası girişi, loading/success/error state'leri, InfoCard ile Ad/Soyad/Etkinlik gösterimi, framer-motion animasyonu
 - **`/verify` rotası** `router.jsx`'e eklendi
 - **Navbar** `HomePage.jsx` ve `CountryPage.jsx`'e eklendi (daha önce hiçbir sayfada render edilmiyordu)
+- **Google Apps Script JSON endpoint aktif** — `doGet` düzeltildi, `ContentService.MimeType.JSON` ile çalışır hale getirildi, yeniden deploy edildi
+- **Site entegrasyonu tamamlandı** — `API_URL` `VerificationPage.jsx`'e yazıldı, `encodeURIComponent` ile belge numarası doğru iletiliyor, uçtan uca çalışır durumda
 
 ### Son Commit
 - `a8c8500` — "Açık tema tamamlandı"
@@ -111,10 +113,9 @@
 
 | # | İş | Öncelik |
 |---|-----|---------|
-| 1 | **Google Apps Script düzeltmesi** — `Code.gs`'teki `doGet` JSON yerine HTML döndürüyor; `ContentService.createTextOutput(JSON.stringify(...)).setMimeType(ContentService.MimeType.JSON)` yapısına geçilecek, yeniden deploy edilecek, yeni URL `VerificationPage.jsx`'e yazılacak | **Kritik** |
-| 2 | **Etkinlik görselleri** — zip hazır; `public/events/` klasörüne atılacak, `events.json` image alanları doldurulacak | Yüksek |
-| 3 | **Favicon + site başlığı** — tarayıcı sekmesi | Orta |
-| 4 | **Deploy** — Vercel | Orta |
+| 1 | **Etkinlik görselleri** — zip hazır; `public/events/` klasörüne atılacak, `events.json` image alanları doldurulacak | Yüksek |
+| 2 | **Favicon + site başlığı** — tarayıcı sekmesi | Orta |
+| 3 | **Deploy** — Vercel | Orta |
 
 ### Bekleyen / Opsiyonel
 
