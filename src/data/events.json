@@ -5,7 +5,7 @@
     "date": "2022-12-09",
     "type": "seminer",
     "description": "Erasmus+ bursluluk fırsatları, akademik değişim programları ve Avrupa Dayanışma Programı (ESC) kapsamında gönüllülük deneyimleri ele alındı. Sertifikalı, iki oturumlu etkinlik.",
-    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "fullDescription": "Tarih: 9 Aralık 2022 | Mekan: Dr. Fuat Sezgin Konferans Salonu | Konuşmacılar: Arzu Kırayoğlu (KEPDER Başkanı), Yaren Yıldırım (KEPDER Eğitmeni), Furkan Karakuş (KS Beniaminek 03-ESC Gönüllü Koordinatörü)\n\nÖğrencilerin Avrupa fon programları ve gönüllülük hareketliliği konusundaki farkındalık düzeyini artırmak amacıyla düzenlenen kapsamlı bir bilgilendirme etkinliği. İki oturum biçiminde yapılandırıldı: Birinci oturumda Erasmus+ kapsamında bursluluk fırsatları, akademik değişim programları ve başvuru süreçleri ele alındı. İkinci oturumda Avrupa Dayanışma Programı çerçevesinde yurt dışı gönüllülük deneyimleri irdelendi. Sertifikalı olarak düzenlenen program, UİKT'nin uluslararası programlar alanındaki ilk önemli çıktısı oldu.",
     "image": "/events/erasmus-plus.jpg"
   },
   {
@@ -14,7 +14,7 @@
     "date": "2022-12-30",
     "type": "atölye",
     "description": "İngilizce konuşma becerilerini geliştirmeye yönelik interaktif dil pratiği etkinliği. Günlük konuşma egzersizleri ve grup tartışmaları gerçekleştirildi.",
-    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "fullDescription": "Tarih: 30 Aralık 2022 | Format: İnteraktif Dil Pratiği\n\nYabancı dil eğitiminde teorik bilginin pratiğe aktarılması amacıyla tasarlanmış özgün bir platform. Katılımcıların İngilizce iletişim becerilerini özgüven içinde kullanabilecekleri samimi ve destekleyici bir ortam sunuldu. Günlük konuşma pratiği egzersizleri, aktüel konular üzerine grup tartışmaları ve etkileşimli diyaloglar gerçekleştirildi.",
     "image": "/events/speaking-club-1.jpg"
   },
   {
@@ -23,7 +23,7 @@
     "date": "2023-01-09",
     "type": "sosyal sorumluluk",
     "description": "Bandırma'da ihtiyaç sahibi bir çocuğa tekerlekli sandalye yardımı ulaştırıldı. Ekol Ortopedi iş birliğiyle yürütülen gönüllülük faaliyeti.",
-    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "fullDescription": "Tarih: 9 Ocak 2023 | Paydaş: Ekol Ortopedi - Bandırma\n\nUİKT'nin 2023 yılındaki ilk faaliyeti olarak gerçekleştirilen sosyal sorumluluk projesi. Topluluk üyeleri, Bandırma'da ihtiyaç sahibi bir çocuğa tekerlekli sandalye yardımı ulaştırmak için gönüllü olarak bir araya geldi. Bağış sürecinin organizasyonu, paydaş kurumlarla koordinasyon ve teslimat aşamalarının tamamı üye katılımıyla yürütüldü.",
     "image": "/events/tekerlekli-sandalye.jpg"
   },
   {
@@ -32,7 +32,7 @@
     "date": "2023-05-06",
     "type": "seminer",
     "description": "Yakın Eğitim iş birliğiyle düzenlenen etkinlikte kamu yönetiminde kariyer, KPSS ve mülakat süreçleri ele alındı. Konuşmacılar: Cengiz Han Gökben, Levent Ersin Orallı.",
-    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "fullDescription": "Tarih: 6 Mayıs 2023 | İş Birliği: Yakın Eğitim | Konuşmacılar: Cengiz Han Gökben, Levent Ersin Orallı\n\nKamu yönetimi alanında kariyer hedefleyen öğrencilere kapsamlı ve uygulamaya yönelik bir rehberlik platformu. Bireysel çalışma ve hazırlık süreçlerinin stratejik yönetimi, KPSS ve mülakat süreçlerine ilişkin deneyim aktarımları, zihinsel dayanıklılık ve motivasyon yönetimi konuları ele alındı.",
     "image": "/events/kamuda-kariyer.jpg"
   },
   {
@@ -41,7 +41,7 @@
     "date": "2023-10-22",
     "type": "atölye",
     "description": "Novo Lounge'da yabancı uyruklu eğitmenlerle (Henry/YDS Akademi, Stanford ve Zubair/Bandırma İstek Okulu) düzenlenen periyodik İngilizce konuşma pratiği seansları.",
-    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "fullDescription": "Tarihler: 22 Ekim 2023 - 22 Aralık 2024 | Mekan: Novo Lounge | Eğitmenler: Henry (YDS Akademi), Stanford ve Zubair (Bandırma İstek Okulu)\n\nUİKT'nin 2023 döneminde sistematik bir yapıya kavuşturduğu, her ay düzenli devam eden seri. Deneyimli yabancı uyruklu eğitmenlerle düzenlenmesi ve özgün lokasyon seçimiyle dikkat çekti. Novo Lounge gibi üniversite dışı bir mekânın tercih edilmesi, resmiyet baskısını azaltarak daha özgün bir dil ortamı yarattı.",
     "image": "/events/speaking-club-serisi.jpg"
   },
   {
@@ -50,7 +50,7 @@
     "date": "2023-12-20",
     "type": "seminer",
     "description": "Aktif görevdeki Kaymakam Abdullah Atakan Atasoy'un katılımıyla gerçekleştirilen sertifikalı etkinlik. Kaymakamlık sınavından göreve başlama sürecine kadar deneyimler paylaşıldı.",
-    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "fullDescription": "Tarih: 20 Aralık 2023 | Konuşmacı: Abdullah Atakan Atasoy (Kaymakam) | Format: Sertifikalı Etkinlik\n\nAktif görevdeki bir kaymakamın katılımıyla gerçekleştirilen program; mesleğin gündelik dinamiklerine, hiyerarşik yapısına, kariyer süreçlerine ve bölgesel yönetim pratiğine dair kapsamlı bir pencere açtı. Kaymakamlık sınavından göreve başlama sürecine kadar deneyimler sahadan örneklerle paylaşıldı.",
     "image": "/events/kaymakam-meslegi.jpg"
   },
   {
@@ -59,7 +59,7 @@
     "date": "2024-05-30",
     "type": "konferans",
     "description": "19., 23. ve 24. Dönem Balıkesir Milletvekili ve 2004-2007 Bandırma Belediye Başkanı Mehmet Cemal Öztaylan'ın katılımıyla Türkiye'nin siyasi ve ekonomik dönüşüm süreçleri ele alındı.",
-    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "fullDescription": "Tarih: 30 Mayıs 2024 | Konuk: Mehmet Cemal Öztaylan (19., 23. ve 24. Dönem Balıkesir Milletvekili, 2004-2007 Bandırma Belediye Başkanı, TBMM Başkanlık Divanı Kâtip Üyesi)\n\nTopluluğumuzun kurumsal iletişim kapasitesini ve etki alanını genişleten bir dönüm noktası. Türkiye'nin siyasi ve ekonomik dönüşüm süreçleri, yerel yönetimlerin ulusal politikalarla ilişkisi, milletvekilliği ve belediye başkanlığı deneyimlerinden süzülen liderlik ilkeleri ana temalar olarak ele alındı.",
     "image": "/events/konferans-2.jpg"
   },
   {
@@ -68,7 +68,7 @@
     "date": "2024-06-04",
     "type": "gezi",
     "description": "TBMM ve Dışişleri Bakanlığı Stratejik Araştırmalar Merkezi (SAM) ziyaret edildi. Yasama süreçleri ve Türkiye'nin dış politika gündemi yerinde incelendi.",
-    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "fullDescription": "Tarih: 4 Haziran 2024 | Ziyaret Edilen Kurumlar: TBMM, Dışişleri Bakanlığı SAM\n\nUİKT'nin 2024 yılı en kapsamlı sahaya çıkış etkinliği. TBMM ziyaretinde yasama organının fiziksel ve kurumsal yapısı yakından tanındı; genel kurul, komisyon çalışmaları ve milletvekilliği kurumu hakkında birincil kaynaklı bilgiler edinildi. SAM ziyaretinde ise Türkiye'nin dış politika gündemi, diplomatik analiz metodolojisi ve uluslararası ilişkiler kariyerine dair derinlemesine sunum yapıldı.",
     "image": "/events/ankara-gezisi.jpg"
   },
   {
@@ -77,7 +77,7 @@
     "date": "2024-09-28",
     "type": "toplantı",
     "description": "2024-2025 dönemi açılış etkinliği. Yeni üyelerle tanışma, geçmiş dönem başarıları ve yıl içi planlanan projeler hakkında bilgilendirme yapıldı.",
-    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "fullDescription": "Tarih: 28 Eylül 2024 | Format: Yüz yüze tanışma toplantısı\n\nUİKT'nin kurumsal sürekliliğini sağlayan, topluluk kültürünü yeni nesillere aktaran organizasyon. Topluluğun geçmiş döneme ait başarıları paylaşıldı; yıl içinde planlanacak projeler, etkinlik türleri ve çalışma alanları hakkında kapsamlı bilgilendirme yapıldı.",
     "image": "/events/yeni-donem.jpg"
   },
   {
@@ -86,7 +86,7 @@
     "date": "2025-04-29",
     "type": "panel",
     "description": "ÜNİDES iş birliği ve Gençlik ve Spor Bakanlığı desteğiyle düzenlendi. GMKA, KOSGEB, İŞ-KUR ve özel sektörden 6 konuşmacı girişimcilik deneyimlerini paylaştı.",
-    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "fullDescription": "Tarih: 29 Nisan 2025 | Mekan: Prof. Dr. Aziz Sancar Konferans Salonu | İş Birliği: ÜNİDES\n\nAltı deneyimli konuşmacının katıldığı, UİKT'nin en geniş konuşmacı ağına sahip kariyer etkinliği. Konuşmacılar: Candan Şahin (GMKA), Uğur Şeker (KOSGEB), Sadık Gündoğan (İŞ-KUR), Ali Bahadır Kuş (Karya İletişim), Ali Osman Sağır (Psikolog), Kadir Demirtaş (Fıstıkzadem). İş kurma sürecinin aşamaları, finansman kaynakları ve devlet destekleri, girişimcinin psikolojik dayanıklılığı gibi kritik konular ele alındı.",
     "image": "/events/girisimcilik.jpg"
   },
   {
@@ -95,7 +95,7 @@
     "date": "2025-11-07",
     "type": "sosyal sorumluluk",
     "description": "'Hayaller Doğada Yeşillenir' temasıyla Bandırma TED Koleji iş birliğinde düzenlenen çevre farkındalığı etkinliği. Farklı yaş gruplarından katılımcılar fidan dikti.",
-    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "fullDescription": "Tarih: 7 Kasım 2025 | Tema: 'Hayaller Doğada Yeşillenir' | İş Birliği: Bandırma TED Koleji\n\nUİKT'nin çevre bilinci ve sürdürülebilirlik eksenindeki sosyal sorumluluk faaliyeti. Üniversitemiz ile Bandırma TED Koleji'nin ortak organizasyonuyla, kuşaklar arası dayanışmanın ve çevre sevgisinin sembolik bir ifadesi oldu.",
     "image": "/events/fidan-dikimi.jpg"
   },
   {
@@ -104,7 +104,7 @@
     "date": "2026-01-28",
     "type": "zirve",
     "description": "Gençlik ve Spor Bakanlığı tarafından Ankara'da düzenlendi. 18 üniversiteden ~500 öğrencinin katıldığı zirvede TBMM, Anıtkabir, Cumhurbaşkanlığı Külliyesi ve AFAD ziyaret edildi.",
-    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "fullDescription": "Tarih: 28 Ocak 2026 | Ziyaret Edilen Kurumlar: TBMM (I., II., III.), Anıtkabir, AFAD, Cumhurbaşkanlığı Külliyesi, Milli Kütüphane, Gençlik ve Spor Bakanlığı\n\nGençlik ve Spor Bakanlığı tarafından düzenlenen zirveye katılım. 12 farklı ilden, 18 üniversiteden yaklaşık 500 öğrencinin yer aldığı zirvede uluslararası ilişkiler, siyaset bilimi ve kamu yönetimi alanlarına ilişkin güncel politika başlıkları ele alındı.",
     "image": "/events/genclik-zirvesi.jpg"
   },
   {
@@ -113,7 +113,7 @@
     "date": "2026-03-31",
     "type": "webinar",
     "description": "BM Dünya Gıda Programı (WFP) Türkiye Ortaklık Sorumlusu Zeynep Özkan ile çevrim içi webinar. Küresel gıda güvenliği, insani diplomasi ve BM kariyer fırsatları ele alındı.",
-    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "fullDescription": "Tarih: 31 Mart 2026 | Platform: Microsoft Teams | Konuşmacı: Zeynep Özkan (BM Dünya Gıda Programı - WFP Türkiye Ortaklık Sorumlusu)\n\nUİKT'nin uluslararası kuruluşlarla doğrudan bağlantı kurduğu en prestijli etkinliği. WFP'nin küresel ölçekteki insani yardım operasyonları, kriz bölgelerindeki gıda güvenliği programları, sürdürülebilir kalkınma projeleri ve Türkiye'deki mülteci faaliyetleri kapsamlı sunum çerçevesinde aktarıldı. BM bünyesindeki kariyer yolları ve staj programları hakkında bilgi paylaşıldı.",
     "image": "/events/wfp-webinar.jpg"
   },
   {
@@ -122,7 +122,7 @@
     "date": "2026-04-06",
     "type": "atölye",
     "description": "Kontenjan sınırlı, sertifikalı workshop. LinkedIn profil optimizasyonu, CV hazırlama ve kişisel markalaşma ilkeleri uygulamalı olarak ele alındı.",
-    "instagramUrl": "https://www.instagram.com/banu.uikt/",
+    "fullDescription": "Tarih: 6 Nisan 2026 | Format: Yüz yüze, kontenjan sınırlı workshop\n\nÖğrencilerin iş piyasasına geçiş sürecindeki en kritik pratik ihtiyaçlarına yanıt veren uygulamaya dönük kariyer geliştirme programı. Profesyonel LinkedIn profilinin temel bileşenleri, başlık ve özet bölümünün stratejik yazımı, kariyer hedefine göre özelleştirilmiş CV formatı ele alındı. Katılımcıların kendi profil ve belgelerini getirerek anında geri bildirim aldığı katılım belgeli workshop formatında gerçekleştirildi.",
     "image": "/events/linkedin-cv.jpg"
   }
 ]

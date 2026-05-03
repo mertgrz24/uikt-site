@@ -1,6 +1,6 @@
 # UIKT Site - PROGRESS
 
-**Son güncelleme:** 3 Mayıs 2026 — belge doğrulama entegrasyonu tamamlandı
+**Son güncelleme:** 3 Mayıs 2026 — UI/UX revizyonu ve sayfa yapısı yeniden düzenlendi
 
 ---
 
@@ -27,24 +27,26 @@
   - `brand.gold: #d4a017` (akademik altın — değişmedi)
 
 ### Bileşenler
-- **Navbar** — sabit üst çubuk
-- **AboutSection** — Hakkımızda / Vizyon / Misyon kartları (framer-motion staggered animasyon)
+- **Navbar** — sabit üst çubuk; UİKT logo (`/uikt-logo.jpeg`); linkler: Ana Sayfa / Faaliyetlerimiz / Teoriler / Bize Katılın (modal) / Belge Doğrula; hamburger menü (mobil)
+- **JoinModal** — "Bize Katılın" modal popup; Google Forms linki (`https://forms.gle/qHrWc86kqzj9caJ59`); ESC + overlay tıklaması ile kapanır; masaüstünde framer-motion fade-in
+- **AboutSection** — Hakkımızda / Misyonumuz / Vizyonumuz kartları (framer-motion staggered animasyon); metinler resmi kaynaktan güncellendi
 - **Globe3D** — react-globe.gl tabanlı; zoom butonları sol-alt köşede, otomatik dönüş (2.5s sonra resume), hover/tıklama ile ülke navigasyonu
 - **TheorySection** — 10 teori için tek bileşen (scroll animasyonları `once: false`)
-- **TheoryNavigator** — 12 bölümlük scroll navigatörü: Hakkımızda + Küre + 10 teori; sadece `lg:` ekranlarda görünür; sadece noktalar (label yok), `title` attr ile tarayıcı tooltip, CSS `hover:bg-gray-400`, IntersectionObserver ile scroll tracking
+- **TheoryNavigator** — 10 bölümlük scroll navigatörü (TheoriesPage'de); sadece `lg:` ekranlarda görünür; sadece noktalar, `title` attr ile tooltip, IntersectionObserver ile scroll tracking
 - **CountryCard** — ülke özet kartı
-- **Footer** — UIKT iletişim, sosyal medya (Instagram, WhatsApp, X, LinkedIn)
-- **ScrollToTop** — route değişiminde sayfa en üste atlar (`HomePage` ve `CountryPage`'e eklendi)
+- **Footer** — UİKT iletişim (`id="join"`), sosyal medya (Instagram, WhatsApp, X, LinkedIn); slogan: "Sınırlarını aş, kariyerini keşfet!"
+- **ScrollToTop** — route değişiminde sayfa en üste atlar
 
 ### Veriler
 - `src/data/countries.js` — 30 ülke (Türkiye dahil), Nisan 2026 güncel liderler
 - `src/data/theories.js` — 10 uluslararası ilişkiler teorisi (docx içeriğine birebir sadık)
 
-### Sayfa Akışı
-1. Hakkımızda (üç kart: Hakkımızda / Vizyon / Misyon)
-2. Küre (3D dünya, 30 ülkeden birine tıklayınca CountryPage açılır)
-3. 10 teori bölümü (sırayla, scroll-triggered)
-4. Footer
+### Sayfa Yapısı (güncel rotalar)
+- `/` — Ana Sayfa: Hakkımızda kartları + 3D küre
+- `/events` — Faaliyetlerimiz: tüm etkinlik kartları
+- `/theories` — Teoriler: 10 teori scroll-triggered, TheoryNavigator
+- `/country/:id` — Ülke detay sayfası
+- `/verify` — Belge doğrulama
 
 ### Çözülen Önemli Sorunlar
 - Three.js + d3-geo triangulation hataları → `react-globe.gl`'e geçildi (`three` 0.170'e yükseltildi)
@@ -82,13 +84,26 @@
 ### Belge Doğrulama (3 Mayıs 2026)
 - **`src/pages/VerificationPage.jsx`** oluşturuldu — belge numarası girişi, loading/success/error state'leri, InfoCard ile Ad/Soyad/Etkinlik gösterimi, framer-motion animasyonu
 - **`/verify` rotası** `router.jsx`'e eklendi
-- **Navbar** `HomePage.jsx` ve `CountryPage.jsx`'e eklendi (daha önce hiçbir sayfada render edilmiyordu)
 - **Google Apps Script JSON endpoint aktif** — `doGet` düzeltildi, `ContentService.MimeType.JSON` ile çalışır hale getirildi, yeniden deploy edildi
-- **Site entegrasyonu tamamlandı** — `API_URL` `VerificationPage.jsx`'e yazıldı, `encodeURIComponent` ile belge numarası doğru iletiliyor, uçtan uca çalışır durumda
+- **Site entegrasyonu tamamlandı** — uçtan uca çalışır durumda
 
-### Son Commit
-- `a8c8500` — "Açık tema tamamlandı"
-- `EventsSection eklendi` — 14 UIKT etkinliği, emoji ikonlar
+### Sayfa Yapısı Yeniden Düzenleme (3 Mayıs 2026)
+- **Etkinlikler ayrı sayfa** — `EventsSection` → `/events` (EventsPage) olarak taşındı
+- **Teoriler ayrı sayfa** — TheorySection + TheoryNavigator → `/theories` (TheoriesPage) olarak taşındı
+- **HomePage sadeleşti** — Hakkımızda + Küre + Footer kaldı
+- **Navbar linkleri** — Ana Sayfa / Faaliyetlerimiz / Teoriler / Bize Katılın / Belge Doğrula
+- **"Ana Sayfaya Dön" butonu** VerificationPage'den kaldırıldı (Navbar zaten var)
+
+### UI/UX Revizyonu (3 Mayıs 2026)
+- **Navbar logosu** — "IR Explorer" yazısı kaldırıldı, `/uikt-logo.jpeg` görseli eklendi (h-9)
+- **Başlık rengi** — tüm sayfalardaki h1/h2 ana başlıklar `text-brand-primary` (#0e3c7d) yapıldı
+- **Üst etiketler kaldırıldı** — "UIKT Hakkında", "Geçmiş & Güncel", "Kuramsal Çerçeve" gibi küçük mono etiketler tüm sayfalardan silindi
+- **Büyük harf başlıklar** — `uppercase` CSS class yerine metin direkt büyük harfle yazıldı (Türkçe ı→I, i→İ düzeltmeleriyle); dinamik başlıkta `.toLocaleUpperCase('tr-TR')` kullanıldı
+- **Küre başlığı** — "International Relations Explorer" → "ULUSLARARASI İLİŞKİLER GEZGİNİ"
+- **"fareyle döndür..."** — mobilde `hidden md:block` ile gizlendi
+- **Footer** — "UIKT" → "UİKT"; slogan "Sınırlarını aş, kariyerini keşfet!" oldu
+- **AboutSection metinleri** — Hakkımızda / Misyonumuz / Vizyonumuz resmi kaynaktan güncellendi
+- **JoinModal eklendi** — "Bize Katılın" tıklanınca modal açılır; Google Forms linki içerir; ESC + overlay ile kapanır
 
 ---
 
