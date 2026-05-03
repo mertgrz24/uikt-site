@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { MotionDiv } from '../utils/motion'
 import eventsData from '../data/events.json'
 import EventDetailModal from './EventDetailModal'
+import ImageLightbox from './ImageLightbox'
 
 const TYPE_EMOJI = {
   'seminer': '🎓',
@@ -32,7 +33,7 @@ function formatDate(dateStr) {
   return d.toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' })
 }
 
-function EventCard({ event, index, onOpen }) {
+function EventCard({ event, index, onOpen, onLightbox }) {
   const emoji = TYPE_EMOJI[event.type] ?? '📌'
   const badgeClass = TYPE_COLOR[event.type] ?? 'bg-gray-100 text-gray-700'
 
@@ -45,11 +46,24 @@ function EventCard({ event, index, onOpen }) {
       className="bg-brand-bgCard border border-brand-border hover:border-brand-secondary hover:shadow-md transition-all duration-300 rounded-2xl overflow-hidden flex flex-col"
     >
       {event.image ? (
-        <img
-          src={event.image}
-          alt={event.title}
-          className="w-full h-44 object-cover"
-        />
+        <div
+          className="relative group cursor-zoom-in"
+          onClick={() => onLightbox(event.image, event.title)}
+        >
+          <img
+            src={event.image}
+            alt={event.title}
+            className="w-full h-44 object-cover"
+          />
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-200 flex items-center justify-center">
+            <svg
+              className="w-7 h-7 text-white opacity-0 group-hover:opacity-90 transition-opacity duration-200 drop-shadow"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0zM11 8v6M8 11h6" />
+            </svg>
+          </div>
+        </div>
       ) : (
         <div className="w-full h-44 flex items-center justify-center bg-brand-bg border-b border-brand-border">
           <span className="text-5xl select-none" role="img" aria-label={event.type}>
@@ -92,6 +106,7 @@ function EventCard({ event, index, onOpen }) {
 
 export default function EventsSection() {
   const [selectedEvent, setSelectedEvent] = useState(null)
+  const [lightbox, setLightbox] = useState(null) // { src, alt }
   const sorted = [...eventsData].sort((a, b) => new Date(b.date) - new Date(a.date))
 
   return (
@@ -111,7 +126,13 @@ export default function EventsSection() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {sorted.map((event, i) => (
-              <EventCard key={event.id} event={event} index={i} onOpen={setSelectedEvent} />
+              <EventCard
+                key={event.id}
+                event={event}
+                index={i}
+                onOpen={setSelectedEvent}
+                onLightbox={(src, alt) => setLightbox({ src, alt })}
+              />
             ))}
           </div>
 
@@ -119,6 +140,12 @@ export default function EventsSection() {
       </section>
 
       <EventDetailModal event={selectedEvent} onClose={() => setSelectedEvent(null)} />
+
+      <ImageLightbox
+        src={lightbox?.src}
+        alt={lightbox?.alt}
+        onClose={() => setLightbox(null)}
+      />
     </>
   )
 }
