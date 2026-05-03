@@ -41,7 +41,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-brand-border bg-brand-bgSection">
+    <footer id="join" className="border-t border-brand-border bg-brand-bgSection">
       <div className="max-w-6xl mx-auto px-4 md:px-8 py-12 flex flex-col items-center text-center gap-4">
 
         <div>

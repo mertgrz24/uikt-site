@@ -27,7 +27,9 @@ export default function HomePage() {
         <AboutSection />
       </div>
 
-      <EventsSection />
+      <div id="events">
+        <EventsSection />
+      </div>
 
       <section id="globe" className="relative flex flex-col items-center justify-center pt-16 pb-8 bg-brand-bg border-t border-brand-border">
         <div className="text-center mb-6 px-4">
@@ -45,7 +47,7 @@ export default function HomePage() {
         </p>
       </section>
 
-      <section className="relative py-24 px-4 bg-brand-bg border-t border-brand-border">
+      <section id="theories" className="relative py-24 px-4 bg-brand-bg border-t border-brand-border">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="font-mono text-brand-accent text-sm tracking-widest uppercase">
             Kuramsal Çerçeve
