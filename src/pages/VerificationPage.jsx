@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -70,14 +69,6 @@ export default function VerificationPage() {
       <main className="flex-1 max-w-2xl mx-auto w-full px-6 pt-24 pb-16">
         <motion.div {...fadeSlide}>
           <div className="mb-8">
-            <Link
-              to="/"
-              className="inline-flex items-center gap-2 text-brand-textMuted hover:text-brand-primary text-sm transition-colors group mb-6"
-            >
-              <span className="group-hover:-translate-x-1 transition-transform">←</span>
-              Ana Sayfaya Dön
-            </Link>
-
             <h1 className="font-display text-3xl md:text-4xl font-bold text-brand-text leading-tight mb-2">
               Belge Doğrulama
             </h1>
