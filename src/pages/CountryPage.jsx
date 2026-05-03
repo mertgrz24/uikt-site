@@ -58,8 +58,8 @@ export default function CountryPage() {
               {country.flag}
             </span>
             <div>
-              <h1 className="font-display text-3xl md:text-4xl font-bold text-brand-text leading-tight">
-                {country.name}
+              <h1 className="font-display text-3xl md:text-4xl font-bold text-brand-primary leading-tight">
+                {country.name.toLocaleUpperCase('tr-TR')}
               </h1>
               <p className="text-brand-textMuted mt-2 text-base leading-relaxed max-w-lg">
                 {country.description}

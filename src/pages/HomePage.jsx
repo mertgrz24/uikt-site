@@ -15,8 +15,8 @@ export default function HomePage() {
 
       <section id="globe" className="relative flex flex-col items-center justify-center pt-16 pb-8 bg-brand-bg border-t border-brand-border">
         <div className="text-center mb-6 px-4">
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-brand-text mb-3 tracking-tight">
-            International Relations Explorer
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-brand-primary mb-3 tracking-tight">
+            ULUSLARARASI İLİŞKİLER GEZGİNİ
           </h1>
           <p className="text-brand-textMuted text-base md:text-lg max-w-xl mx-auto">
             Dünya üzerindeki ülkeleri ve uluslararası ilişkiler teorilerini keşfet.
@@ -24,7 +24,7 @@ export default function HomePage() {
           </p>
         </div>
         <Globe3D />
-        <p className="text-brand-textMuted text-xs mt-4 font-mono">
+        <p className="hidden md:block text-brand-textMuted text-xs mt-4 font-mono">
           fareyle döndür · tıkla · yakınlaştır
         </p>
       </section>

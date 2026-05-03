@@ -18,8 +18,8 @@ export default function Navbar() {
     <>
       <nav className="fixed top-0 left-0 right-0 z-40 bg-brand-bg/90 backdrop-blur border-b border-brand-border">
         <div className="max-w-5xl mx-auto px-6 h-12 flex items-center justify-between">
-          <Link to="/" className="font-display text-sm font-semibold text-brand-text hover:text-brand-accent transition-colors">
-            IR Explorer
+          <Link to="/" className="flex items-center">
+            <img src="/uikt-logo.jpeg" alt="UİKT" className="h-9 w-auto object-contain" />
           </Link>
 
           {/* Desktop */}

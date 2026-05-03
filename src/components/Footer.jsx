@@ -48,11 +48,11 @@ export default function Footer() {
           <h2 className="text-xl font-semibold text-brand-text leading-snug">
             Uluslararası İlişkiler ve Kariyer Topluluğu
           </h2>
-          <p className="text-sm tracking-wider text-brand-accent mt-1">UIKT</p>
+          <p className="text-sm tracking-wider text-brand-accent mt-1">UİKT</p>
         </div>
 
         <p className="text-brand-textMuted text-sm max-w-xl leading-relaxed">
-          Uluslararası ilişkiler alanında öğrencileri bir araya getiren, akademik ve kariyer odaklı öğrenci topluluğu.
+          Sınırlarını aş, kariyerini keşfet!
         </p>
 
         <a

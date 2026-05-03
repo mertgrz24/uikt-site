@@ -21,11 +21,8 @@ export default function AboutSection() {
       <div className="max-w-6xl mx-auto px-4 md:px-8">
 
         <div className="text-center mb-16">
-          <span className="text-sm tracking-widest text-brand-accent uppercase font-mono">
-            UIKT Hakkında
-          </span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-text mt-3">
-            Uluslararası İlişkiler ve Kariyer Topluluğu
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-primary">
+            ULUSLARARASI İLİŞKİLER VE KARİYER TOPLULUĞU
           </h2>
           <div className="w-24 h-1 bg-brand-primary mx-auto mt-6 rounded-full" />
         </div>

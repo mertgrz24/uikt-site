@@ -69,8 +69,8 @@ export default function VerificationPage() {
       <main className="flex-1 max-w-2xl mx-auto w-full px-6 pt-24 pb-16">
         <motion.div {...fadeSlide}>
           <div className="mb-8">
-            <h1 className="font-display text-3xl md:text-4xl font-bold text-brand-text leading-tight mb-2">
-              Belge Doğrulama
+            <h1 className="font-display text-3xl md:text-4xl font-bold text-brand-primary leading-tight mb-2">
+              BELGE DOĞRULAMA
             </h1>
             <p className="text-brand-textMuted text-base leading-relaxed">
               UIKT etkinlik katılım belgenizi doğrulamak için belge numaranızı giriniz.

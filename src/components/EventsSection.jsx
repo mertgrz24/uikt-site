@@ -98,11 +98,8 @@ export default function EventsSection() {
       <div className="max-w-6xl mx-auto px-4 md:px-8">
 
         <div className="text-center mb-16">
-          <span className="text-sm tracking-widest text-brand-accent uppercase font-mono">
-            Geçmiş & Güncel
-          </span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-text mt-3">
-            Faaliyetlerimiz
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-primary">
+            FAALİYETLERİMİZ
           </h2>
           <div className="w-24 h-1 bg-brand-primary mx-auto mt-6 rounded-full" />
           <p className="text-brand-textMuted mt-6 max-w-xl mx-auto text-base">
