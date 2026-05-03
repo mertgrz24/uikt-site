@@ -38,9 +38,12 @@ export default function VerificationPage() {
     setErrorMsg('')
 
     try {
-      const res = await fetch(`${API_URL}?belgeNo=${encodeURIComponent(trimmed)}`)
+      const url = `${API_URL}?belgeNo=${encodeURIComponent(trimmed)}`
+      console.log('[VerificationPage] fetch URL:', url)
+      const res = await fetch(url)
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       const data = await res.json()
+      console.log('[VerificationPage] response data:', data)
 
       if (data && data.found === false) {
         setStatus('error')
