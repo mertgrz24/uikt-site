@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 import ScrollToTop from '../components/ScrollToTop'
 
 const API_URL =
-  'https://script.google.com/macros/s/AKfycbztImCclaAksgmlyEGuBhulNFHvaSUq7ciecVJJQgYzNwEIUGl66q94ss1JhSjET2g/exec'
+  'https://script.google.com/macros/s/AKfycbzcX5I4UUcSrWYf4tF8kgjvVgW3YCRCBhSoQzQ8Gr2_gKLaftNkVM9bcWRD6usJkxTnKw/exec'
 
 const fadeSlide = {
   initial: { opacity: 0, y: 24 },
