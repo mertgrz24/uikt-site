@@ -24,6 +24,7 @@ export default function Navbar() {
 
           {/* Desktop */}
           <div className="hidden md:flex items-center gap-5">
+            <Link to="/" className={linkCls}>Ana Sayfa</Link>
             <Link to="/events" className={linkCls}>Faaliyetlerimiz</Link>
             <Link to="/theories" className={linkCls}>Teoriler</Link>
             <button onClick={openJoin} className={linkCls}>Bize Katılın</button>
@@ -45,6 +46,7 @@ export default function Navbar() {
         {/* Mobile dropdown */}
         {menuOpen && (
           <div className="md:hidden bg-brand-bg/95 backdrop-blur border-b border-brand-border px-6 pb-4 pt-2 flex flex-col gap-3">
+            <Link to="/" onClick={() => setMenuOpen(false)} className={mobileLinkCls}>Ana Sayfa</Link>
             <Link to="/events" onClick={() => setMenuOpen(false)} className={mobileLinkCls}>Faaliyetlerimiz</Link>
             <Link to="/theories" onClick={() => setMenuOpen(false)} className={mobileLinkCls}>Teoriler</Link>
             <button onClick={openJoin} className={`${mobileLinkCls} text-left`}>Bize Katılın</button>
