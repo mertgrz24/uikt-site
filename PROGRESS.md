@@ -137,3 +137,13 @@
 | # | İş | Öncelik |
 |---|-----|---------|
 | 4 | **Çift tıklama gerektiren ülke seçimi** — Küre dönerken ilk tıklama bazen ülkeyi seçemiyor; kritik değil | Düşük |
+### Etkinlik Detay Sistemi (4 Mayıs 2026)
+- EventDetailModal.jsx oluşturuldu — etkinlik detay modali
+- Etkinlik açıklamaları rapordan tam metinlerle dolduruldu (14 etkinlik, birebir rapor metni)
+- Etkinlik kartlarındaki Instagram linkleri kaldırıldı, "Detaylar" butonu eklendi
+- ImageLightbox.jsx oluşturuldu — modal içindeki görsele tıklayınca lightbox açılır
+- Kart görseli artık tıklanamaz, sadece dekoratif; lightbox sadece modal içinden tetiklenir
+
+### Navigasyon Güncellemeleri (4 Mayıs 2026)
+- Navbar'a "Ana Sayfa" linki eklendi
+- "Bize Katılın" artık footer'a scroll yapmıyor, JoinModal popup açıyor
