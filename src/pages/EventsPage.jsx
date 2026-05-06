@@ -5,7 +5,7 @@ import EventsSection from '../components/EventsSection'
 
 export default function EventsPage() {
   return (
-    <div className="bg-brand-bg min-h-screen flex flex-col">
+    <div className="min-h-screen bg-brand-bg text-brand-text flex flex-col">
       <ScrollToTop />
       <Navbar />
       <main className="flex-1 pt-12">

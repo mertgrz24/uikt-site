@@ -5,15 +5,15 @@ export default function CountryCard({ country }) {
   return (
     <button
       onClick={() => navigate(`/country/${country.id}`)}
-      className="bg-[#111827] border border-gray-800 rounded-xl p-4 text-left hover:border-gray-600 hover:bg-[#1f2937] transition-all duration-200 group"
+      className="card-glass rounded-xl p-4 text-left hover:bg-white/10 transition-all duration-200 group"
     >
       <div className="flex items-center gap-3 mb-2">
         <span className="text-3xl">{country.flag}</span>
-        <span className="font-display font-semibold text-white text-sm group-hover:text-brand-accent transition-colors">
+        <span className="font-display font-semibold text-white text-sm group-hover:text-brand-accentLight transition-colors">
           {country.name}
         </span>
       </div>
-      <p className="text-gray-500 text-xs font-mono">{country.capital}</p>
+      <p className="text-brand-textMuted text-xs font-mono">{country.capital}</p>
     </button>
   )
 }

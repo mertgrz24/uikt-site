@@ -6,8 +6,8 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [joinOpen, setJoinOpen] = useState(false)
 
-  const linkCls = 'text-xs font-mono text-brand-textMuted hover:text-brand-primary transition-colors'
-  const mobileLinkCls = 'text-sm font-mono text-brand-textMuted hover:text-brand-primary transition-colors'
+  const linkCls = 'text-xs font-mono text-brand-text hover:text-brand-accentLight transition-colors'
+  const mobileLinkCls = 'text-sm font-mono text-brand-text hover:text-brand-accentLight transition-colors'
 
   function openJoin() {
     setMenuOpen(false)
@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-40 bg-brand-bg/90 backdrop-blur border-b border-brand-border">
+      <nav className="fixed top-0 left-0 right-0 z-40 bg-brand-bg/85 backdrop-blur-md border-b border-white/10">
         <div className="max-w-5xl mx-auto px-6 h-12 flex items-center justify-between">
           <Link to="/" className="flex items-center">
             <img src="/uikt-logo.jpeg" alt="UİKT" className="h-9 w-auto object-contain" />
@@ -33,7 +33,7 @@ export default function Navbar() {
 
           {/* Hamburger */}
           <button
-            className="md:hidden flex flex-col gap-1.5 p-1 text-brand-textMuted hover:text-brand-text transition-colors"
+            className="md:hidden flex flex-col gap-1.5 p-1 text-brand-text hover:text-brand-accentLight transition-colors"
             onClick={() => setMenuOpen((v) => !v)}
             aria-label="Menüyü aç/kapat"
           >
@@ -45,7 +45,7 @@ export default function Navbar() {
 
         {/* Mobile dropdown */}
         {menuOpen && (
-          <div className="md:hidden bg-brand-bg/95 backdrop-blur border-b border-brand-border px-6 pb-4 pt-2 flex flex-col gap-3">
+          <div className="md:hidden bg-brand-bg backdrop-blur-md border-t border-white/10 px-6 pb-4 pt-2 flex flex-col gap-3">
             <Link to="/" onClick={() => setMenuOpen(false)} className={mobileLinkCls}>Ana Sayfa</Link>
             <Link to="/events" onClick={() => setMenuOpen(false)} className={mobileLinkCls}>Faaliyetlerimiz</Link>
             <Link to="/theories" onClick={() => setMenuOpen(false)} className={mobileLinkCls}>Teoriler</Link>

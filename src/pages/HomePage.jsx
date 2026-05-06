@@ -6,16 +6,16 @@ import ScrollToTop from '../components/ScrollToTop'
 
 export default function HomePage() {
   return (
-    <main className="bg-brand-bg min-h-screen">
+    <main className="min-h-screen bg-brand-bg text-brand-text">
       <ScrollToTop />
       <Navbar />
       <div id="about">
         <AboutSection />
       </div>
 
-      <section id="globe" className="relative flex flex-col items-center justify-center pt-16 pb-8 bg-brand-bg border-t border-brand-border">
+      <section id="globe" className="relative flex flex-col items-center justify-center pt-16 pb-8 bg-brand-bg border-t border-white/10">
         <div className="text-center mb-6 px-4">
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-brand-primary mb-3 tracking-tight">
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-3 tracking-tight">
             ULUSLARARASI İLİŞKİLER GEZGİNİ
           </h1>
           <p className="text-brand-textMuted text-base md:text-lg max-w-xl mx-auto">

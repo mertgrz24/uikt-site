@@ -180,14 +180,14 @@ export default function GlobeDesktop() {
             <button
               onClick={() => handleZoom('in')}
               aria-label="Yakınlaştır"
-              className="w-10 h-10 rounded bg-brand-bgCard border border-brand-border hover:bg-brand-hover text-brand-text text-xl font-bold flex items-center justify-center transition-colors shadow-sm"
+              className="w-10 h-10 rounded card-glass hover:bg-white/10 text-white text-xl font-bold flex items-center justify-center transition-colors"
             >
               +
             </button>
             <button
               onClick={() => handleZoom('out')}
               aria-label="Uzaklaştır"
-              className="w-10 h-10 rounded bg-brand-bgCard border border-brand-border hover:bg-brand-hover text-brand-text text-xl font-bold flex items-center justify-center transition-colors shadow-sm"
+              className="w-10 h-10 rounded card-glass hover:bg-white/10 text-white text-xl font-bold flex items-center justify-center transition-colors"
             >
               −
             </button>

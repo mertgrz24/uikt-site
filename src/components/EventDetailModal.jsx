@@ -3,15 +3,15 @@ import { MotionDiv } from '../utils/motion'
 import ImageLightbox from './ImageLightbox'
 
 const TYPE_COLOR = {
-  'seminer': 'bg-blue-100 text-blue-700',
-  'webinar': 'bg-purple-100 text-purple-700',
-  'atölye': 'bg-amber-100 text-amber-700',
-  'konferans': 'bg-rose-100 text-rose-700',
-  'panel': 'bg-teal-100 text-teal-700',
-  'gezi': 'bg-sky-100 text-sky-700',
-  'sosyal sorumluluk': 'bg-green-100 text-green-700',
-  'toplantı': 'bg-slate-100 text-slate-700',
-  'zirve': 'bg-indigo-100 text-indigo-700',
+  'seminer': 'bg-blue-500/15 text-blue-300 border border-blue-500/30',
+  'webinar': 'bg-purple-500/15 text-purple-300 border border-purple-500/30',
+  'atölye': 'bg-amber-500/15 text-amber-300 border border-amber-500/30',
+  'konferans': 'bg-rose-500/15 text-rose-300 border border-rose-500/30',
+  'panel': 'bg-teal-500/15 text-teal-300 border border-teal-500/30',
+  'gezi': 'bg-sky-500/15 text-sky-300 border border-sky-500/30',
+  'sosyal sorumluluk': 'bg-green-500/15 text-green-300 border border-green-500/30',
+  'toplantı': 'bg-slate-500/15 text-slate-300 border border-slate-500/30',
+  'zirve': 'bg-indigo-500/15 text-indigo-300 border border-indigo-500/30',
 }
 
 function formatDate(dateStr) {
@@ -45,7 +45,7 @@ export default function EventDetailModal({ event, onClose }) {
 
   if (!event) return null
 
-  const badgeClass = TYPE_COLOR[event.type] ?? 'bg-gray-100 text-gray-700'
+  const badgeClass = TYPE_COLOR[event.type] ?? 'bg-white/10 text-white/70 border border-white/20'
   const parts = (event.fullDescription ?? event.description).split('\n\n')
   const metaLine = parts[0]
   const bodyParts = parts.slice(1)
@@ -54,14 +54,14 @@ export default function EventDetailModal({ event, onClose }) {
     <>
       <div
         className="fixed inset-0 z-50 flex items-center justify-center px-4 py-6"
-        style={{ backgroundColor: 'rgba(0,0,0,0.45)' }}
+        style={{ backgroundColor: 'rgba(0,0,0,0.70)' }}
         onClick={onClose}
       >
         <MotionDiv
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
-          className="relative bg-brand-bg border border-brand-border rounded-2xl shadow-xl w-full max-w-2xl max-h-[85vh] overflow-y-auto"
+          className="relative bg-brand-bgSection border border-white/10 rounded-2xl shadow-xl w-full max-w-2xl max-h-[85vh] overflow-y-auto"
           onClick={(e) => e.stopPropagation()}
         >
           {event.image && (
@@ -89,7 +89,7 @@ export default function EventDetailModal({ event, onClose }) {
             <button
               onClick={onClose}
               aria-label="Kapat"
-              className="absolute top-4 right-4 text-brand-textMuted hover:text-brand-text transition-colors text-xl leading-none"
+              className="absolute top-4 right-4 text-white/60 hover:text-white transition-colors text-xl leading-none"
             >
               ✕
             </button>
@@ -103,18 +103,18 @@ export default function EventDetailModal({ event, onClose }) {
               </span>
             </div>
 
-            <h2 className="font-display text-xl font-bold text-brand-text leading-snug mb-5">
+            <h2 className="font-display text-xl font-bold text-white leading-snug mb-5">
               {event.title}
             </h2>
 
-            <div className="bg-brand-bgCard border border-brand-border rounded-xl px-5 py-4 mb-5">
+            <div className="card-glass rounded-xl px-5 py-4 mb-5">
               <p className="text-sm text-brand-textMuted leading-relaxed">
                 {metaLine}
               </p>
             </div>
 
             {bodyParts.map((para, i) => (
-              <p key={i} className="text-sm text-brand-text leading-relaxed mb-3 last:mb-0">
+              <p key={i} className="text-sm text-brand-textMuted leading-relaxed mb-3 last:mb-0">
                 {para}
               </p>
             ))}

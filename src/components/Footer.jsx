@@ -41,14 +41,14 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer id="join" className="border-t border-brand-border bg-brand-bgSection">
+    <footer id="join" className="bg-brand-bgSection border-t border-white/10">
       <div className="max-w-6xl mx-auto px-4 md:px-8 py-12 flex flex-col items-center text-center gap-4">
 
         <div>
-          <h2 className="text-xl font-semibold text-brand-text leading-snug">
+          <h2 className="text-xl font-semibold text-white leading-snug">
             Uluslararası İlişkiler ve Kariyer Topluluğu
           </h2>
-          <p className="text-sm tracking-wider text-brand-accent mt-1">UİKT</p>
+          <p className="text-sm tracking-wider text-brand-accentLight mt-1">UİKT</p>
         </div>
 
         <p className="text-brand-textMuted text-sm max-w-xl leading-relaxed">
@@ -57,7 +57,7 @@ export default function Footer() {
 
         <a
           href="mailto:uluslararasiiliskilervekariyer@gmail.com"
-          className="text-brand-textMuted hover:text-brand-primary text-xs md:text-sm transition-colors break-all text-center px-4"
+          className="text-brand-textMuted hover:text-brand-accentLight text-xs md:text-sm transition-colors break-all text-center px-4"
         >
           📧 uluslararasiiliskilervekariyer@gmail.com
         </a>
@@ -70,15 +70,15 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="text-brand-textMuted hover:text-brand-primary transition-colors"
+              className="text-brand-textMuted hover:text-brand-accentLight transition-colors"
             >
               {icon}
             </a>
           ))}
         </div>
 
-        <div className="w-full border-t border-brand-border mt-4 pt-4">
-          <p className="text-xs text-brand-textMuted">© 2026 UIKT. Tüm hakları saklıdır.</p>
+        <div className="w-full border-t border-white/10 mt-4 pt-4">
+          <p className="text-xs text-brand-textSubtle">© 2026 UİKT — Bandırma Onyedi Eylül Üniversitesi</p>
         </div>
 
       </div>

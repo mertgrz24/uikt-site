@@ -39,8 +39,8 @@ export default function TheoryNavigator({ sections }) {
         >
           <span className={`block rounded-full transition-all duration-200 ${
             active === index
-              ? 'w-3 h-3 bg-brand-accent'
-              : 'w-2 h-2 bg-gray-300 hover:bg-gray-400'
+              ? 'w-3 h-3 bg-brand-accentLight scale-125'
+              : 'w-2 h-2 bg-white/20 hover:bg-white/40'
           }`} />
         </button>
       ))}

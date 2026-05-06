@@ -167,10 +167,10 @@ export default function Globe3D() {
             <button
               key={country.id}
               onClick={() => navigate(`/country/${country.id}`)}
-              className="flex items-center gap-2 px-3 py-2.5 bg-brand-bgCard border border-brand-border hover:border-brand-secondary hover:bg-brand-hover rounded-xl text-left transition-colors duration-200"
+              className="card-glass rounded-lg p-3 text-white hover:bg-white/10 flex items-center gap-2 text-left transition-colors duration-200"
             >
               <span className="text-xl leading-none">{country.flag}</span>
-              <span className="text-brand-text text-sm font-medium leading-snug truncate">
+              <span className="text-white text-sm font-medium leading-snug truncate">
                 {country.name}
               </span>
             </button>
@@ -214,14 +214,14 @@ export default function Globe3D() {
             <button
               onClick={() => handleZoom('in')}
               aria-label="Yakınlaştır"
-              className="w-10 h-10 rounded bg-brand-bgCard border border-brand-border hover:bg-brand-hover text-brand-text text-xl font-bold flex items-center justify-center transition-colors shadow-sm"
+              className="w-10 h-10 rounded card-glass hover:bg-white/10 text-white text-xl font-bold flex items-center justify-center transition-colors"
             >
               +
             </button>
             <button
               onClick={() => handleZoom('out')}
               aria-label="Uzaklaştır"
-              className="w-10 h-10 rounded bg-brand-bgCard border border-brand-border hover:bg-brand-hover text-brand-text text-xl font-bold flex items-center justify-center transition-colors shadow-sm"
+              className="w-10 h-10 rounded card-glass hover:bg-white/10 text-white text-xl font-bold flex items-center justify-center transition-colors"
             >
               −
             </button>

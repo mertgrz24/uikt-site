@@ -21,7 +21,7 @@ export default function ImageLightbox({ src, alt, onClose }) {
       <button
         onClick={onClose}
         aria-label="Kapat"
-        className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors text-2xl leading-none z-10"
+        className="absolute top-4 right-4 text-white/60 hover:text-white transition-colors text-2xl leading-none z-10"
       >
         ✕
       </button>

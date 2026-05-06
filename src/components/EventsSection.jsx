@@ -16,15 +16,15 @@ const TYPE_EMOJI = {
 }
 
 const TYPE_COLOR = {
-  'seminer': 'bg-blue-100 text-blue-700',
-  'webinar': 'bg-purple-100 text-purple-700',
-  'atölye': 'bg-amber-100 text-amber-700',
-  'konferans': 'bg-rose-100 text-rose-700',
-  'panel': 'bg-teal-100 text-teal-700',
-  'gezi': 'bg-sky-100 text-sky-700',
-  'sosyal sorumluluk': 'bg-green-100 text-green-700',
-  'toplantı': 'bg-slate-100 text-slate-700',
-  'zirve': 'bg-indigo-100 text-indigo-700',
+  'seminer': 'bg-blue-500/15 text-blue-300 border border-blue-500/30',
+  'webinar': 'bg-purple-500/15 text-purple-300 border border-purple-500/30',
+  'atölye': 'bg-amber-500/15 text-amber-300 border border-amber-500/30',
+  'konferans': 'bg-rose-500/15 text-rose-300 border border-rose-500/30',
+  'panel': 'bg-teal-500/15 text-teal-300 border border-teal-500/30',
+  'gezi': 'bg-sky-500/15 text-sky-300 border border-sky-500/30',
+  'sosyal sorumluluk': 'bg-green-500/15 text-green-300 border border-green-500/30',
+  'toplantı': 'bg-slate-500/15 text-slate-300 border border-slate-500/30',
+  'zirve': 'bg-indigo-500/15 text-indigo-300 border border-indigo-500/30',
 }
 
 function formatDate(dateStr) {
@@ -34,7 +34,7 @@ function formatDate(dateStr) {
 
 function EventCard({ event, index, onOpen }) {
   const emoji = TYPE_EMOJI[event.type] ?? '📌'
-  const badgeClass = TYPE_COLOR[event.type] ?? 'bg-gray-100 text-gray-700'
+  const badgeClass = TYPE_COLOR[event.type] ?? 'bg-white/10 text-white/70 border border-white/20'
 
   return (
     <MotionDiv
@@ -42,7 +42,7 @@ function EventCard({ event, index, onOpen }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.2 }}
       transition={{ duration: 0.5, delay: (index % 3) * 0.1, ease: [0.4, 0, 0.2, 1] }}
-      className="bg-brand-bgCard border border-brand-border hover:border-brand-secondary hover:shadow-md transition-all duration-300 rounded-2xl overflow-hidden flex flex-col"
+      className="card-glass rounded-2xl overflow-hidden flex flex-col"
     >
       {event.image ? (
         <img
@@ -51,7 +51,7 @@ function EventCard({ event, index, onOpen }) {
           className="w-full h-44 object-cover"
         />
       ) : (
-        <div className="w-full h-44 flex items-center justify-center bg-brand-bg border-b border-brand-border">
+        <div className="w-full h-44 flex items-center justify-center bg-white/5 border-b border-white/10">
           <span className="text-5xl select-none" role="img" aria-label={event.type}>
             {emoji}
           </span>
@@ -68,7 +68,7 @@ function EventCard({ event, index, onOpen }) {
           </span>
         </div>
 
-        <h3 className="text-base font-semibold text-brand-text leading-snug mb-3">
+        <h3 className="text-base font-semibold text-white leading-snug mb-3">
           {event.title}
         </h3>
 
@@ -78,7 +78,7 @@ function EventCard({ event, index, onOpen }) {
 
         <button
           onClick={() => onOpen(event)}
-          className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-brand-secondary hover:text-brand-primary transition-colors duration-200 self-start"
+          className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-brand-accentLight hover:text-white transition-colors duration-200 self-start"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 110 20A10 10 0 0112 2z" />
@@ -96,14 +96,14 @@ export default function EventsSection() {
 
   return (
     <>
-      <section className="w-full bg-brand-bg py-20 md:py-28">
+      <section className="bg-network-pattern w-full py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-4 md:px-8">
 
           <div className="text-center mb-16">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-primary">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-wide">
               FAALİYETLERİMİZ
             </h2>
-            <div className="w-24 h-1 bg-brand-primary mx-auto mt-6 rounded-full" />
+            <div className="w-24 h-0.5 bg-brand-accentLight mx-auto mt-6" />
             <p className="text-brand-textMuted mt-6 max-w-xl mx-auto text-base">
               2022'den bugüne düzenlediğimiz seminer, atölye, konferans ve sosyal sorumluluk etkinlikleri.
             </p>
