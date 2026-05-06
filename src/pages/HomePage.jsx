@@ -33,12 +33,12 @@ export default function HomePage() {
         </div>
 
         {/* World map */}
-        <div className="relative z-10 w-full max-w-6xl mx-auto opacity-90">
+        <div className="relative z-10 w-full max-w-6xl mx-auto">
           <img
-            src="/world-map.svg"
-            alt="Dünya haritası"
-            className="w-full select-none"
-            draggable={false}
+            src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
+            alt="Dünya Haritası"
+            className="w-full max-w-6xl mx-auto opacity-90"
+            style={{ filter: 'brightness(0) invert(1)' }}
           />
         </div>
       </section>
