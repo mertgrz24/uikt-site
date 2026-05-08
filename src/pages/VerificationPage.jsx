@@ -81,19 +81,19 @@ export default function VerificationPage() {
             <label className="block text-sm font-medium text-brand-textMuted mb-2">
               Belge Numarası
             </label>
-            <div className="flex gap-3">
+            <div className="flex flex-col gap-3 sm:flex-row">
               <input
                 type="text"
                 value={belgeNo}
                 onChange={(e) => setBelgeNo(e.target.value)}
                 onKeyDown={handleKeyDown}
                 placeholder="Örn: UIKT-2025-001"
-                className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm font-mono placeholder:text-brand-textSubtle focus:outline-none focus:border-brand-accentLight focus:bg-white/10 transition-colors"
+                className="w-full sm:flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm font-mono placeholder:text-brand-textSubtle focus:outline-none focus:border-brand-accentLight focus:bg-white/10 transition-colors"
               />
               <button
                 onClick={handleQuery}
                 disabled={status === 'loading' || !belgeNo.trim()}
-                className="px-5 py-3 bg-brand-accentLight/15 hover:bg-brand-accentLight/25 text-brand-accentLight border border-brand-accentLight/30 text-sm font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+                className="w-full sm:w-auto px-5 py-3 bg-brand-accentLight/15 hover:bg-brand-accentLight/25 text-brand-accentLight border border-brand-accentLight/30 text-sm font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
               >
                 {status === 'loading' ? 'Sorgulanıyor…' : 'Sorgula'}
               </button>
