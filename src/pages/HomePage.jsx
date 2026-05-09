@@ -12,7 +12,9 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="min-h-screen bg-brand-bgSection flex flex-col items-center justify-center overflow-hidden px-4 pt-12">
-        <div className="w-24 h-0.5 bg-brand-accentLight mb-10" />
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center tracking-wide mb-6 px-4">
+          ULUSLARARASI İLİŞKİLER VE KARİYER TOPLULUĞU
+        </h1>
 
         {/* World map */}
         <div className="w-full max-w-6xl mx-auto">

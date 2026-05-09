@@ -20,13 +20,6 @@ export default function AboutSection() {
     <section className="bg-network-pattern w-full py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
 
-        <div className="text-center mb-16">
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-wide">
-            ULUSLARARASI İLİŞKİLER VE KARİYER TOPLULUĞU
-          </h2>
-          <div className="w-24 h-0.5 bg-brand-accentLight mx-auto mt-6" />
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {cards.map((card, i) => (
             <MotionDiv
