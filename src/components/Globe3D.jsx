@@ -26,7 +26,7 @@ export default function Globe3D() {
             <button
               key={country.id}
               onClick={() => navigate(`/country/${country.id}`)}
-              className="card-glass rounded-lg p-3 text-white hover:bg-white/10 flex items-center gap-2 text-left transition-colors duration-200"
+              className="bg-white/5 border border-white/10 rounded-lg p-3 text-white hover:bg-white/10 flex items-center gap-2 text-left transition-colors duration-200"
             >
               <span className="text-xl leading-none">{country.flag}</span>
               <span className="text-white text-sm font-medium leading-snug truncate">
