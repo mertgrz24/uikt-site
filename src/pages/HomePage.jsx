@@ -11,17 +11,17 @@ export default function HomePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="min-h-screen bg-brand-bgSection flex flex-col items-center justify-center overflow-hidden px-4 pt-12">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center tracking-wide mb-6 px-4">
+      <section className="min-h-[85vh] md:min-h-screen bg-brand-bgSection flex flex-col items-center justify-center overflow-hidden px-4 pt-16 pb-8">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white text-center tracking-wide mb-6 px-4">
           ULUSLARARASI İLİŞKİLER VE KARİYER TOPLULUĞU
         </h1>
 
         {/* World map */}
-        <div className="w-full max-w-6xl mx-auto">
+        <div className="w-full max-w-6xl mx-auto overflow-hidden">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
             alt="Dünya Haritası"
-            className="w-full max-w-6xl mx-auto opacity-90"
+            className="w-full max-w-6xl mx-auto opacity-90 object-contain max-h-[50vh] md:max-h-none"
             style={{ filter: 'brightness(0) invert(1)' }}
           />
         </div>
