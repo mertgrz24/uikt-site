@@ -1,16 +1,25 @@
+import { motion } from 'framer-motion'
+
 const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
 
-let MotionDiv, MotionH2, MotionBlockquote
-
-if (isMobile) {
-  MotionDiv = ({ children, className, style }) => <div className={className} style={style}>{children}</div>
-  MotionH2 = ({ children, className }) => <h2 className={className}>{children}</h2>
-  MotionBlockquote = ({ children, className }) => <blockquote className={className}>{children}</blockquote>
-} else {
-  const { motion } = await import('framer-motion')
-  MotionDiv = motion.div
-  MotionH2 = motion.h2
-  MotionBlockquote = motion.blockquote
+function makeMobile(El) {
+  return function MobileMotion({ children, className, style, initial, animate, whileInView, transition, viewport }) {
+    return (
+      <El
+        className={className}
+        style={style}
+        initial={initial}
+        animate={animate}
+        whileInView={whileInView}
+        transition={transition}
+        viewport={viewport}
+      >
+        {children}
+      </El>
+    )
+  }
 }
 
-export { MotionDiv, MotionH2, MotionBlockquote }
+export const MotionDiv = isMobile ? makeMobile(motion.div) : motion.div
+export const MotionH2 = isMobile ? makeMobile(motion.h2) : motion.h2
+export const MotionBlockquote = isMobile ? makeMobile(motion.blockquote) : motion.blockquote
