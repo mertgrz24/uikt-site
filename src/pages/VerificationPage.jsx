@@ -66,39 +66,66 @@ export default function VerificationPage() {
       <ScrollToTop />
       <Navbar />
 
-      <main className="flex-1 max-w-2xl mx-auto w-full px-6 pt-24 pb-16">
-        <motion.div {...fadeSlide}>
-          <div className="mb-8">
-            <h1 className="font-display text-3xl md:text-4xl font-bold text-white leading-tight mb-2">
-              BELGE DOĞRULAMA
-            </h1>
-            <p className="text-brand-textMuted text-base leading-relaxed">
-              UIKT etkinlik katılım belgenizi doğrulamak için belge numaranızı giriniz.
-            </p>
+      <main className="flex-1 flex flex-col items-center justify-center px-4 py-16">
+        <motion.div {...fadeSlide} className="w-full flex flex-col items-center">
+
+          {/* Üst ikon */}
+          <div className="w-14 h-14 rounded-2xl bg-brand-accentLight/10 border border-brand-accentLight/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5"
+              className="text-brand-accentLight" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
           </div>
 
-          <div className="card-glass rounded-2xl p-6 mb-8">
-            <label className="block text-sm font-medium text-brand-textMuted mb-2">
+          <h1
+            className="text-3xl font-bold text-white text-center mb-2"
+            style={{ fontFamily: 'var(--font-display)' }}
+          >
+            Belge Doğrulama
+          </h1>
+
+          <p
+            className="text-brand-textMuted text-sm text-center mb-10 max-w-sm leading-relaxed"
+            style={{ fontFamily: 'var(--font-body)' }}
+          >
+            UİKT etkinlik katılım belgenizi doğrulamak için belge numaranızı giriniz.
+          </p>
+
+          <div className="card-glass rounded-2xl p-8 w-full max-w-md mb-4">
+            <label
+              className="block text-xs font-medium text-brand-textMuted mb-2 tracking-wide uppercase"
+              style={{ fontFamily: 'var(--font-body)' }}
+            >
               Belge Numarası
             </label>
-            <div className="flex flex-col gap-3 sm:flex-row">
+            <div className="flex gap-3">
               <input
                 type="text"
                 value={belgeNo}
                 onChange={(e) => setBelgeNo(e.target.value)}
                 onKeyDown={handleKeyDown}
                 placeholder="Örn: UIKT-2025-001"
-                className="w-full sm:flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm font-mono placeholder:text-brand-textSubtle focus:outline-none focus:border-brand-accentLight focus:bg-white/10 transition-colors"
+                style={{ fontFamily: 'var(--font-body)' }}
+                className="flex-1 px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white text-sm placeholder:text-white/20 focus:outline-none focus:border-brand-accentLight/50 focus:bg-white/8 transition-all"
               />
               <button
                 onClick={handleQuery}
                 disabled={status === 'loading' || !belgeNo.trim()}
-                className="w-full sm:w-auto px-5 py-3 bg-brand-accentLight/15 hover:bg-brand-accentLight/25 text-brand-accentLight border border-brand-accentLight/30 text-sm font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+                style={{ fontFamily: 'var(--font-body)' }}
+                className="px-5 py-3 bg-brand-accentLight/15 hover:bg-brand-accentLight/25 text-brand-accentLight border border-brand-accentLight/25 rounded-xl text-sm font-medium transition-all whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {status === 'loading' ? 'Sorgulanıyor…' : 'Sorgula'}
               </button>
             </div>
           </div>
+
+          <p
+            className="text-brand-textSubtle text-xs text-center max-w-xs mb-8"
+            style={{ fontFamily: 'var(--font-body)' }}
+          >
+            Belge numaranız katılım sertifikanızın alt kısmında yer almaktadır.
+          </p>
 
           {status === 'loading' && (
             <div className="flex items-center justify-center gap-3 py-12 text-brand-textMuted">

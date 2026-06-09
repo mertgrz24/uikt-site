@@ -13,9 +13,9 @@ const fadeSlide = {
 
 function InfoCard({ label, value }) {
   return (
-    <div className="card-glass rounded-xl p-6">
-      <p className="text-xs uppercase tracking-wider text-brand-textSubtle mb-2">{label}</p>
-      <p className="text-xl text-white font-semibold leading-snug">{value}</p>
+    <div className="card-glass rounded-xl p-5">
+      <p className="text-xs uppercase tracking-widest text-brand-textSubtle mb-2" style={{ fontFamily: 'var(--font-body)' }}>{label}</p>
+      <p className="text-xl font-semibold text-white leading-snug" style={{ fontFamily: 'var(--font-display)' }}>{value}</p>
     </div>
   )
 }
@@ -43,29 +43,34 @@ export default function CountryPage() {
     <div className="min-h-screen bg-network-pattern text-brand-text">
       <ScrollToTop />
       <Navbar />
-      <div className="max-w-3xl mx-auto px-6 py-12">
+      <div className="max-w-4xl mx-auto px-4 py-8">
         <motion.div {...fadeSlide}>
           <button
             onClick={() => navigate(-1)}
-            className="mb-10 flex items-center gap-2 text-brand-textMuted hover:text-brand-accentLight text-sm transition-colors group"
+            className="mb-10 flex items-center gap-2 text-sm text-brand-textMuted hover:text-white transition-colors duration-200 group"
           >
-            <span className="group-hover:-translate-x-1 transition-transform">←</span>
+            <span className="group-hover:-translate-x-1 transition-transform duration-200">←</span>
             Küreye Dön
           </button>
 
-          <div className="flex items-center gap-5 mb-8">
-            <span className="text-7xl select-none" role="img" aria-label={country.name}>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 mb-4">
+            <span className="text-7xl leading-none select-none" role="img" aria-label={country.name}>
               {country.flag}
             </span>
-            <div>
-              <h1 className="font-display text-3xl md:text-4xl font-bold text-white leading-tight">
-                {country.name.toLocaleUpperCase('tr-TR')}
-              </h1>
-              <p className="text-brand-textMuted mt-2 text-base leading-relaxed max-w-lg">
-                {country.description}
-              </p>
-            </div>
+            <h1
+              className="text-4xl md:text-5xl font-bold text-white leading-tight"
+              style={{ fontFamily: 'var(--font-display)' }}
+            >
+              {country.name}
+            </h1>
           </div>
+
+          <p
+            className="text-brand-textMuted text-base leading-relaxed mb-10 max-w-2xl"
+            style={{ fontFamily: 'var(--font-body)' }}
+          >
+            {country.description}
+          </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
             <InfoCard label="Başkent" value={country.capital} />
@@ -74,13 +79,19 @@ export default function CountryPage() {
             <InfoCard label="GSYİH" value={country.gdp} />
           </div>
 
-          <div className="card-glass rounded-xl p-6">
-            <h3 className="text-2xl font-semibold text-white mb-4">Üyesi Olduğu Kuruluşlar</h3>
+          <div className="card-glass rounded-xl p-5">
+            <h3
+              className="text-sm font-semibold text-white mb-4"
+              style={{ fontFamily: 'var(--font-display)' }}
+            >
+              Üyesi Olduğu Kuruluşlar
+            </h3>
             <div className="flex flex-wrap gap-2">
               {country.organizations.map((org) => (
                 <span
                   key={org}
-                  className="px-3 py-1 bg-brand-accentLight/15 text-brand-accentLight border border-brand-accentLight/30 rounded-full text-sm"
+                  className="px-3 py-1 text-xs bg-brand-accentLight/10 text-brand-accentLight border border-brand-accentLight/20 rounded-full"
+                  style={{ fontFamily: 'var(--font-body)' }}
                 >
                   {org}
                 </span>

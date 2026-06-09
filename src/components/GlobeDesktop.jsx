@@ -90,6 +90,12 @@ export default function GlobeDesktop() {
   }, [])
 
   useEffect(() => {
+    if (!topology || !dimensions.width) return
+    const canvas = containerRef.current?.querySelector('canvas')
+    if (canvas) canvas.style.imageRendering = 'crisp-edges'
+  }, [topology, dimensions.width])
+
+  useEffect(() => {
     if (!globeRef.current || !topology) return
     const controls = globeRef.current.controls()
     controls.enableZoom = false
@@ -172,7 +178,8 @@ export default function GlobeDesktop() {
             polygonCapColor={getCapColor}
             polygonSideColor={() => 'rgba(0,0,0,0)'}
             polygonStrokeColor={() => BORDER_COLOR}
-            polygonAltitude={0.005}
+            polygonAltitude={0.006}
+            rendererConfig={{ antialias: true, alpha: true }}
             onPolygonClick={handleClick}
             onPolygonHover={handleHover}
           />

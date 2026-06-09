@@ -28,21 +28,19 @@ export default function TheoryNavigator({ sections }) {
   }, [sections])
 
   return (
-    <div className="fixed right-5 top-1/2 -translate-y-1/2 z-50 flex-col gap-3 hidden lg:flex">
+    <div className="fixed right-5 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-40 hidden lg:flex">
       {sections.map((section, index) => (
         <button
           key={section.id}
           onClick={() => scrollTo(index)}
           title={section.label}
           aria-label={section.label}
-          className="flex items-center justify-end p-1"
-        >
-          <span className={`block rounded-full transition-all duration-200 ${
+          className={`rounded-full transition-all duration-200 ${
             active === index
-              ? 'w-3 h-3 bg-brand-accentLight scale-125'
-              : 'w-2 h-2 bg-white/20 hover:bg-white/40'
-          }`} />
-        </button>
+              ? 'w-2.5 h-2.5 bg-brand-accentLight shadow-lg shadow-brand-accentLight/30 scale-110'
+              : 'w-2 h-2 bg-white/20 hover:bg-white/50 hover:scale-125'
+          }`}
+        />
       ))}
     </div>
   )

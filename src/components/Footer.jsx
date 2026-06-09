@@ -62,7 +62,7 @@ export default function Footer() {
           📧 uluslararasiiliskilervekariyer@gmail.com
         </a>
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center justify-center gap-6">
           {socials.map(({ label, href, icon }) => (
             <a
               key={label}

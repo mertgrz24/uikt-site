@@ -17,10 +17,27 @@ const cards = [
 
 export default function AboutSection() {
   return (
-    <section className="bg-network-pattern w-full py-20 md:py-28">
-      <div className="max-w-6xl mx-auto px-4 md:px-8">
+    <section className="bg-network-pattern w-full py-20 px-4">
+      <div className="max-w-6xl mx-auto">
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        {/* Başlık bloğu */}
+        <div className="text-center mb-14">
+          <span
+            className="text-xs font-medium text-brand-accentLight/60 tracking-[0.2em] uppercase mb-4 block"
+            style={{ fontFamily: 'var(--font-body)' }}
+          >
+            Hakkımızda
+          </span>
+          <h2
+            className="text-2xl md:text-3xl font-bold text-white"
+            style={{ fontFamily: 'var(--font-display)' }}
+          >
+            Uluslararası İlişkiler ve Kariyer Topluluğu
+          </h2>
+        </div>
+
+        {/* Kartlar */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 items-stretch">
           {cards.map((card, i) => (
             <MotionDiv
               key={card.title}
@@ -28,11 +45,24 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.6, delay: i * 0.15, ease: [0.4, 0, 0.2, 1] }}
-              className="card-glass rounded-2xl p-8"
+              className="card-glass rounded-2xl p-6 md:p-7 flex flex-col gap-4"
             >
-              <div className="w-10 h-0.5 bg-white/40 mb-6" />
-              <h3 className="text-2xl font-semibold text-white mb-4">{card.title}</h3>
-              <p className="text-brand-textMuted text-base leading-relaxed">{card.body}</p>
+              {/* İkon */}
+              <div className="w-8 h-8 rounded-lg bg-brand-accentLight/10 border border-brand-accentLight/20 flex items-center justify-center">
+                <div className="w-3 h-3 rounded-full bg-brand-accentLight/60" />
+              </div>
+              <h3
+                className="text-lg font-semibold text-white"
+                style={{ fontFamily: 'var(--font-display)' }}
+              >
+                {card.title}
+              </h3>
+              <p
+                className="text-brand-textMuted text-sm leading-relaxed flex-1"
+                style={{ fontFamily: 'var(--font-body)' }}
+              >
+                {card.body}
+              </p>
             </MotionDiv>
           ))}
         </div>
