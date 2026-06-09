@@ -73,7 +73,6 @@ export default function TheorySection({ theory }) {
           >
             <span
               className="text-[80px] md:text-[160px] font-bold leading-none select-none"
-              style={{ fontFamily: 'var(--font-display)', color: 'rgba(255,255,255,0.04)' }}
             >
               {theory.number}
             </span>
@@ -82,7 +81,6 @@ export default function TheorySection({ theory }) {
           <div className="flex-1 min-w-0">
             <MotionH2
               className="text-2xl md:text-3xl font-bold text-white mb-6 leading-tight"
-              style={{ fontFamily: 'var(--font-display)' }}
               {...fadeUp(0.05)}
             >
               {theory.title}

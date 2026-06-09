@@ -14,8 +14,8 @@ const fadeSlide = {
 function InfoCard({ label, value }) {
   return (
     <div className="card-glass rounded-xl p-5">
-      <p className="text-xs uppercase tracking-widest text-brand-textSubtle mb-2" style={{ fontFamily: 'var(--font-body)' }}>{label}</p>
-      <p className="text-xl font-semibold text-white leading-snug" style={{ fontFamily: 'var(--font-display)' }}>{value}</p>
+      <p className="text-xs uppercase tracking-widest text-brand-textSubtle mb-2">{label}</p>
+      <p className="text-xl font-semibold text-white leading-snug">{value}</p>
     </div>
   )
 }
@@ -59,7 +59,6 @@ export default function CountryPage() {
             </span>
             <h1
               className="text-4xl md:text-5xl font-bold text-white leading-tight"
-              style={{ fontFamily: 'var(--font-display)' }}
             >
               {country.name}
             </h1>
@@ -67,7 +66,6 @@ export default function CountryPage() {
 
           <p
             className="text-brand-textMuted text-base leading-relaxed mb-10 max-w-2xl"
-            style={{ fontFamily: 'var(--font-body)' }}
           >
             {country.description}
           </p>
@@ -82,7 +80,6 @@ export default function CountryPage() {
           <div className="card-glass rounded-xl p-5">
             <h3
               className="text-sm font-semibold text-white mb-4"
-              style={{ fontFamily: 'var(--font-display)' }}
             >
               Üyesi Olduğu Kuruluşlar
             </h3>
@@ -91,7 +88,6 @@ export default function CountryPage() {
                 <span
                   key={org}
                   className="px-3 py-1 text-xs bg-brand-accentLight/10 text-brand-accentLight border border-brand-accentLight/20 rounded-full"
-                  style={{ fontFamily: 'var(--font-body)' }}
                 >
                   {org}
                 </span>

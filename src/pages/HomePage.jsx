@@ -26,7 +26,6 @@ export default function HomePage() {
             <div className="w-6 h-px bg-brand-accentLight/50" />
             <span
               className="text-xs font-medium text-brand-accentLight/70 tracking-[0.2em] uppercase"
-              style={{ fontFamily: 'var(--font-body)' }}
             >
               Bandırma Onyedi Eylül Üniversitesi
             </span>
@@ -35,8 +34,7 @@ export default function HomePage() {
 
           {/* Ana başlık */}
           <h1
-            className="text-gradient text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-4 max-w-4xl"
-            style={{ fontFamily: 'var(--font-display)' }}
+            className="text-gradient text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-10 md:mb-16 max-w-4xl"
           >
             Uluslararası İlişkiler ve Kariyer Topluluğu
           </h1>
@@ -44,7 +42,6 @@ export default function HomePage() {
           {/* Alt metin */}
           <p
             className="text-brand-textMuted text-sm md:text-base text-center mb-10 max-w-lg leading-relaxed"
-            style={{ fontFamily: 'var(--font-body)' }}
           >
             Küresel perspektif, akademik derinlik, kariyer vizyonu.
           </p>

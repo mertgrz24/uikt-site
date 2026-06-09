@@ -80,14 +80,12 @@ export default function VerificationPage() {
 
           <h1
             className="text-3xl font-bold text-white text-center mb-2"
-            style={{ fontFamily: 'var(--font-display)' }}
           >
             Belge Doğrulama
           </h1>
 
           <p
             className="text-brand-textMuted text-sm text-center mb-10 max-w-sm leading-relaxed"
-            style={{ fontFamily: 'var(--font-body)' }}
           >
             UİKT etkinlik katılım belgenizi doğrulamak için belge numaranızı giriniz.
           </p>
@@ -95,7 +93,6 @@ export default function VerificationPage() {
           <div className="card-glass rounded-2xl p-8 w-full max-w-md mb-4">
             <label
               className="block text-xs font-medium text-brand-textMuted mb-2 tracking-wide uppercase"
-              style={{ fontFamily: 'var(--font-body)' }}
             >
               Belge Numarası
             </label>
@@ -106,13 +103,11 @@ export default function VerificationPage() {
                 onChange={(e) => setBelgeNo(e.target.value)}
                 onKeyDown={handleKeyDown}
                 placeholder="Örn: UIKT-2025-001"
-                style={{ fontFamily: 'var(--font-body)' }}
                 className="flex-1 px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white text-sm placeholder:text-white/20 focus:outline-none focus:border-brand-accentLight/50 focus:bg-white/8 transition-all"
               />
               <button
                 onClick={handleQuery}
                 disabled={status === 'loading' || !belgeNo.trim()}
-                style={{ fontFamily: 'var(--font-body)' }}
                 className="px-5 py-3 bg-brand-accentLight/15 hover:bg-brand-accentLight/25 text-brand-accentLight border border-brand-accentLight/25 rounded-xl text-sm font-medium transition-all whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {status === 'loading' ? 'Sorgulanıyor…' : 'Sorgula'}
@@ -122,7 +117,6 @@ export default function VerificationPage() {
 
           <p
             className="text-brand-textSubtle text-xs text-center max-w-xs mb-8"
-            style={{ fontFamily: 'var(--font-body)' }}
           >
             Belge numaranız katılım sertifikanızın alt kısmında yer almaktadır.
           </p>

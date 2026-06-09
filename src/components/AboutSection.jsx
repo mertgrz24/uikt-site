@@ -24,13 +24,11 @@ export default function AboutSection() {
         <div className="text-center mb-14">
           <span
             className="text-xs font-medium text-brand-accentLight/60 tracking-[0.2em] uppercase mb-4 block"
-            style={{ fontFamily: 'var(--font-body)' }}
           >
             Hakkımızda
           </span>
           <h2
             className="text-2xl md:text-3xl font-bold text-white"
-            style={{ fontFamily: 'var(--font-display)' }}
           >
             Uluslararası İlişkiler ve Kariyer Topluluğu
           </h2>
@@ -53,13 +51,11 @@ export default function AboutSection() {
               </div>
               <h3
                 className="text-lg font-semibold text-white"
-                style={{ fontFamily: 'var(--font-display)' }}
               >
                 {card.title}
               </h3>
               <p
                 className="text-brand-textMuted text-sm leading-relaxed flex-1"
-                style={{ fontFamily: 'var(--font-body)' }}
               >
                 {card.body}
               </p>
