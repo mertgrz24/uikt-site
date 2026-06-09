@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { MotionDiv } from '../utils/motion'
 import eventsData from '../data/events.json'
 import EventDetailModal from './EventDetailModal'
 
@@ -36,7 +37,13 @@ function EventCard({ event, index, onOpen }) {
   const badgeClass = TYPE_COLOR[event.type] ?? 'bg-white/10 text-white/70 border border-white/20'
 
   return (
-    <div className="card-glass rounded-2xl overflow-hidden flex flex-col">
+    <MotionDiv
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+      viewport={{ once: true }}
+      className="card-glass rounded-2xl overflow-hidden flex flex-col"
+    >
       {event.image ? (
         <img
           src={event.image}
@@ -79,7 +86,7 @@ function EventCard({ event, index, onOpen }) {
           Detaylar
         </button>
       </div>
-    </div>
+    </MotionDiv>
   )
 }
 
