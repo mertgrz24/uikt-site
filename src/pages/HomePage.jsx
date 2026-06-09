@@ -11,7 +11,7 @@ export default function HomePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] md:min-h-screen bg-brand-bgSection flex flex-col items-center justify-center overflow-hidden pt-16">
+      <section className="relative min-h-[90vh] md:min-h-screen bg-brand-bgSection flex flex-col items-center justify-center overflow-hidden pt-24">
 
         {/* Arka plan ambient glow */}
         <div className="absolute inset-0 pointer-events-none">
@@ -22,7 +22,7 @@ export default function HomePage() {
         <div className="relative z-10 w-full flex flex-col items-center px-4">
 
           {/* Üst etiket — çok küçük ekranda gizle */}
-          <div className="hidden sm:flex items-center gap-2 mb-6">
+          <div className="hidden sm:flex items-center gap-2 mb-4">
             <div className="w-6 h-px bg-brand-accentLight/50" />
             <span
               className="text-xs font-medium text-brand-accentLight/70 tracking-[0.2em] uppercase"

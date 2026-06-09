@@ -24,6 +24,10 @@ export default function Navbar() {
 
           {/* Desktop */}
           <div className="hidden md:flex items-center gap-8">
+            <Link to="/" className={linkCls}>Ana Sayfa</Link>
+            <Link to="/events" className={linkCls}>Faaliyetlerimiz</Link>
+            <Link to="/theories" className={linkCls}>Teoriler</Link>
+            <Link to="/verify" className={linkCls}>Belge Doğrula</Link>
             <button
               onClick={openJoin}
               className="px-4 py-2 text-sm font-medium bg-brand-accentLight/10 hover:bg-brand-accentLight/20 text-brand-accentLight border border-brand-accentLight/25 rounded-full transition-all duration-200"
@@ -47,6 +51,10 @@ export default function Navbar() {
         {/* Mobile dropdown */}
         {menuOpen && (
           <div className="md:hidden bg-brand-bg/95 backdrop-blur-xl border-t border-white/10 px-6 pb-5 pt-3 flex flex-col gap-3">
+            <Link to="/" onClick={() => setMenuOpen(false)} className={mobileLinkCls}>Ana Sayfa</Link>
+            <Link to="/events" onClick={() => setMenuOpen(false)} className={mobileLinkCls}>Faaliyetlerimiz</Link>
+            <Link to="/theories" onClick={() => setMenuOpen(false)} className={mobileLinkCls}>Teoriler</Link>
+            <Link to="/verify" onClick={() => setMenuOpen(false)} className={mobileLinkCls}>Belge Doğrula</Link>
             <button
               onClick={openJoin}
               className="w-full text-center py-3 text-sm font-medium bg-brand-accentLight/10 hover:bg-brand-accentLight/20 text-brand-accentLight border border-brand-accentLight/25 rounded-full transition-all duration-200"
